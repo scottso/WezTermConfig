@@ -7,13 +7,23 @@ local function use_dark()
 end
 
 return {
+  -- Font configuration with fallback font that contains icons etc.
   font = wezterm.font_with_fallback({ "MonoLisa Fancy", "Symbols Nerd Font Mono" }),
-  font_size = 14.0,
+  font_size = 13.0,
+  --
   -- Adding some themes that are not part of the built in themes of wezterm
   color_scheme_dirs = { "~/.config/wezterm/colors" },
   -- First theme after the function is the dark theme
   color_scheme = use_dark() and "melange_dark" or "melange_light",
+  --
+  -- Hinting algorithm of freetype rasterizer
+  freetype_load_target = "Light", -- Light is good for macOS, default is 'Normal'
+  --
+  -- Window decoration
+  window_decorations = "RESIZE", -- "NONE", "TITLE", "RESIZE", "TITLE | RESIZE"
+  --
   -- Tab bar settings
   hide_tab_bar_if_only_one_tab = true,
-  tab_bar_at_bottom = true,
+  use_fancy_tab_bar = false,
+  --
 }
