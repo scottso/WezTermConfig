@@ -22,8 +22,18 @@ return {
   -- Window decoration
   window_decorations = "RESIZE", -- "NONE", "TITLE", "RESIZE", "TITLE | RESIZE"
   --
+  -- Dont resize window when resizing font
+  adjust_window_size_when_changing_font_size = false,
+  --
   -- Tab bar settings
   hide_tab_bar_if_only_one_tab = true,
   use_fancy_tab_bar = false,
+  --
+  -- Setting up TERM
+  -- set_environment_variables = {
+  --   TERMINFO_DIRS = "~/.terminfo",
+  --   WSLENV = "TERMINFO_DIRS",
+  -- },
+  -- term = "wezterm",
   --
 }
