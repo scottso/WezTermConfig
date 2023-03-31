@@ -12,7 +12,6 @@ My personal WezTerm configuration, made public for easy cloning
 ## Installation of WezTerm and dependencies
 
 ```zsh
-brew install fish
 brew install --cask wezterm
 ```
 

@@ -5,7 +5,6 @@ local function use_dark()
 end
 
 return {
-  default_prog = { "/opt/homebrew/bin/fish", "-l" },
   font = wezterm.font_with_fallback({ "MonoLisa Fancy", "Symbols Nerd Font Mono" }),
   font_size = 13.0,
   color_scheme_dirs = { "~/.config/wezterm/colors" },
