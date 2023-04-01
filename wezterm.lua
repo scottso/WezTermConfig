@@ -11,6 +11,7 @@ return {
   -- First theme after the function is the dark theme
   color_scheme = use_dark() and "nightfox" or "dayfox",
   freetype_load_target = "Light",
+  freetype_render_target = "HorizontalLcd",
   adjust_window_size_when_changing_font_size = false,
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
