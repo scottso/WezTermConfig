@@ -9,7 +9,7 @@ return {
   font_size = 13.0,
   color_scheme_dirs = { "~/.config/wezterm/colors" },
   -- First theme after the function is the dark theme
-  color_scheme = use_dark() and "melange_dark" or "melange_light",
+  color_scheme = use_dark() and "nightfox" or "dawnfox",
   freetype_load_target = "Light",
   adjust_window_size_when_changing_font_size = false,
   hide_tab_bar_if_only_one_tab = true,
