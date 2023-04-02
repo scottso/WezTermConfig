@@ -3,9 +3,9 @@ local wezterm = require("wezterm")
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
-    return "zenbones_dark"
+    return "melange_dark"
   else
-    return "zenbones"
+    return "melange_light"
   end
 end
 
