@@ -11,6 +11,8 @@ end
 
 return {
   freetype_load_target = "Light",
+  initial_rows = 40,
+  initial_cols = 110,
   font = wezterm.font_with_fallback({ "MonoLisa Fancy", "Symbols Nerd Font Mono" }),
   font_size = 13.0,
   color_scheme_dirs = { "~/.config/wezterm/colors" },
