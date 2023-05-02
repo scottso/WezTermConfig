@@ -4,10 +4,12 @@ local wezterm = require("wezterm")
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Dark theme
-    return "Zenbones_dark"
+    -- return "Zenbones_dark"
+    return "nightfox"
   else
     -- Light theme
-    return "Zenbones_light"
+    --return "Zenbones_light"
+    return "dayfox"
   end
 end
 
