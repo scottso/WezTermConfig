@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
 set -e
 
+# This script checks if the required apps are installed, creates a .terminfo directory,
+# and downloads and compiles the wezterm.terminfo file using tic
+
 # Checking for apps needed by this script
 for APP in curl mktemp tic; do
-	if
-		! command -v "$APP" >/dev/null 2>&1
-	then
+	if ! command -v "$APP" >/dev/null 2>&1; then
 		echo "command $APP not found"
 		exit 1
 	fi
 done
 
-# Create terminfo dir in home directory
-if [ ! -d "$HOME"/.terminfo ]; then
-	mkdir "$HOME"/.terminfo
-fi
+# Create terminfo dir in home directory if it doesn't exist
+mkdir -p "$HOME"/.terminfo
 
 # Downloading terminfo file for wezterm and compiling it
 tempfile=$(mktemp) &&
