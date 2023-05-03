@@ -30,7 +30,7 @@ return {
   audible_bell = "Disabled",
   -- Tab bar configuration
   window_frame = {
-    font = wezterm.font({ family = "MonoLisa Fancy", weight = "Medium" }),
-    font_size = 10.0,
+    font = wezterm.font({ family = "MonoLisa Fancy", weight = "Light" }),
+    font_size = 11.0,
   },
 }
