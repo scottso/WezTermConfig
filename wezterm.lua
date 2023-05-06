@@ -17,7 +17,7 @@ return {
   color_scheme_dirs = { "~/.config/wezterm/colors" },
   color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
   font = wezterm.font_with_fallback({
-    { family = "MonoLisa Fancy" },
+    { family = "MonoLisa FancyScript" },
     { family = "Symbols Nerd Font Mono", scale = 0.8 },
   }),
   font_size = 13.0,
