@@ -21,7 +21,7 @@ return {
     { family = "Symbols Nerd Font Mono", scale = 0.8 },
   }),
   font_size = 13.0,
-  initial_rows = 28,
+  initial_rows = 32,
   initial_cols = 88,
   scrollback_lines = 5000,
   adjust_window_size_when_changing_font_size = false,
