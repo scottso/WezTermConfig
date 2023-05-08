@@ -34,7 +34,7 @@ return {
   font = wezterm.font_with_fallback({
     {
       family = "MonoLisa",
-      weight = "Medium",
+      weight = "Regular",
     },
     {
       -- Fallback font with all the Netd Font Symbols
