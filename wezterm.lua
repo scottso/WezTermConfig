@@ -18,6 +18,7 @@ return {
   color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
   harfbuzz_features = {
     "cv01=0", -- a variations
+    "ss01=1", -- r variations
     "cv02=1", -- g variations
     "zero=1", -- 0 variations
     "cv14=1", -- 3 varioations
