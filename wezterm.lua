@@ -17,32 +17,39 @@ return {
   color_scheme_dirs = { "~/.config/wezterm/colors" },
   color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
   harfbuzz_features = {
-    "calt=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-calt
-    "clig=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-clig
-    "liga=1", -- Ligatures
-    "zero=0", -- 0 with slash or dot
-    "ss01=0", -- * Asterisk normal or raised
-    "ss02=0", -- Script variant of font
-    "ss06=0", -- @ variants
-    "ss07=1", -- {} variations
-    "ss08=1", -- () variations
-    "ss09=1", -- >= 2 sharacters wide or not
-    "ss10=0", -- >= Alternate appearance for 1 char width
-    "ss11=1", -- 0xF Alternate hex appearance
-    "ss12=0", -- \\ Thin backslash (ruins ASCII art)
+    "cv01=0", -- a variations
+    "cv02=1", -- g variations
+    "zero=1", -- 0 variations
+    "cv14=1", -- 3 varioations
+    "onum=0", -- 1234567890 raised thousand separators
+    "ss05=0", -- @ variations
+    "ss04=1", -- $ variations
+    "cv18=1", -- % variations
+    "ss03=1", -- & variations
+    "cv31=1", -- () variations
+    "cv29=0", -- {} variations
+    "ss08=0", -- != ===
+    "cv24=0", -- /=
+    "ss09=1", -- >>=
+    "cv25=1", -- .-
+    "cv26=1", -- :-
+    "cv32=1", -- .=
+    "cv27=1", -- []
+    "cv28=1", -- {. .}
+    "ss07=1", -- =~ !~
   },
   font = wezterm.font_with_fallback({
     {
-      family = "MonoLisa",
+      family = "Fira Code",
       weight = "Regular",
     },
     {
       -- Fallback font with all the Netd Font Symbols
       family = "Symbols Nerd Font Mono",
-      scale = 0.8,
+      scale = 0.9,
     },
   }),
-  font_size = 13.0,
+  font_size = 14.0,
   initial_rows = 32,
   initial_cols = 88,
   scrollback_lines = 5000,
@@ -52,7 +59,7 @@ return {
   audible_bell = "Disabled",
   -- Tab bar configuration
   window_frame = {
-    font = wezterm.font({ family = "MonoLisa", weight = "Light" }),
-    font_size = 11.0,
+    font = wezterm.font({ family = "Fira Code", weight = "Light" }),
+    font_size = 12.0,
   },
 }
