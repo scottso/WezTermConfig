@@ -39,7 +39,7 @@ return {
     {
       -- Fallback font with all the Netd Font Symbols
       family = "Symbols Nerd Font Mono",
-      scale = 0.8,
+      scale = 0.9,
     },
   }),
   font_size = 13.0,
