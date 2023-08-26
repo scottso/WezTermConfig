@@ -27,8 +27,6 @@ brights = [
   "#ECE1D7"
 ]
 
-[colors.indexed]
-
 [metadata]
 name = 'melange_dark'
 origin_url = 'https://github.com/savq/melange-nvim/blob/master/term/wezterm/melange_dark.toml'
