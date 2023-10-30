@@ -16,6 +16,7 @@ return {
   freetype_load_target = "Light",
   color_scheme_dirs = { "~/.config/wezterm/colors" },
   color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
+  -- All of the MonoLisa features are documented on the download page of https://www.monolisa.dev
   harfbuzz_features = {
     "calt=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-calt
     "clig=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-clig
@@ -27,9 +28,7 @@ return {
     "ss07=1", -- {} variations
     "ss08=1", -- () variations
     "ss09=1", -- >= 2 sharacters wide or not
-    "ss10=0", -- >= Alternate appearance for 1 char width
     "ss11=1", -- 0xF Alternate hex appearance
-    "ss12=0", -- \\ Thin backslash (ruins ASCII art)
   },
   font = wezterm.font_with_fallback({
     {
