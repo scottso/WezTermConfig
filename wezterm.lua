@@ -32,7 +32,7 @@ return {
   },
   font = wezterm.font_with_fallback({
     {
-      family = "MonoLisa",
+      family = "MonoLisa Variable",
       weight = "Regular",
     },
     {
