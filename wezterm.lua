@@ -4,10 +4,10 @@ local wezterm = require("wezterm")
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Dark theme
-    return "Harmonic16 Dark (base16)"
+    return "One Dark (Gogh)"
   else
     -- Light theme
-    return "Harmonic16 Light (base16)"
+    return "One Light (Gogh)"
   end
 end
 
