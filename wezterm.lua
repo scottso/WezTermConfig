@@ -70,8 +70,6 @@ return {
   freetype_load_target = "Light",
   color_scheme_dirs = { "~/.config/wezterm/colors" },
   color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
-  window_frame = tab_bar_config.window_frame,
-  colors = tab_bar_config.colors,
   -- All of the MonoLisa features are documented on the download page of https://www.monolisa.dev
   harfbuzz_features = {
     "calt=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-calt
@@ -105,4 +103,9 @@ return {
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
   audible_bell = "Disabled",
+  -- Tab bar configuration
+  window_frame = {
+    font = wezterm.font({ family = "MonoLisa", weight = "Light" }),
+    font_size = 11.0,
+  },
 }
