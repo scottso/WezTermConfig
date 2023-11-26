@@ -17,7 +17,7 @@ local function tab_bar_style_for_appearance(appearance)
     return {
       window_frame = {
         font = wezterm.font { family = 'MonoLisa Variable', weight = 'Thin' },
-        font_size = 10.0,
+        font_size = 9.0,
         inactive_titlebar_bg = '#353535',
         active_titlebar_bg = '#2b2042',
         inactive_titlebar_fg = '#cccccc',
@@ -40,7 +40,7 @@ local function tab_bar_style_for_appearance(appearance)
     return {
       window_frame = {
         font = wezterm.font { family = 'MonoLisa Variable', weight = 'Thin' },
-        font_size = 10.0,
+        font_size = 9.0,
         inactive_titlebar_bg = '#E0E0E0',            -- Adjust these for light theme
         active_titlebar_bg = '#FFFFFF',              -- Adjust these for light theme
         inactive_titlebar_fg = '#000000',            -- Adjust these for light theme
@@ -50,7 +50,7 @@ local function tab_bar_style_for_appearance(appearance)
         button_fg = '#000000',                       -- Adjust these for light theme
         button_bg = '#F0F0F0',                       -- Adjust these for light theme
         button_hover_fg = '#000000',                 -- Adjust these for light theme
-        button_hover_bg = '#C0C0C0',                 -- Adjust these for light theme
+        button_hover_bg = '#C0C0C0',                 -- Adjust these for light theme              -- Adjust these for light theme
       },
       colors = {
         tab_bar = {
@@ -70,6 +70,7 @@ return {
   freetype_load_target = "Light",
   color_scheme_dirs = { "~/.config/wezterm/colors" },
   color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
+  window_frame = tab_bar_config.window_frame,
   -- All of the MonoLisa features are documented on the download page of https://www.monolisa.dev
   harfbuzz_features = {
     "calt=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-calt
@@ -103,9 +104,4 @@ return {
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
   audible_bell = "Disabled",
-  -- Tab bar configuration
-  window_frame = {
-    font = wezterm.font({ family = "MonoLisa", weight = "Light" }),
-    font_size = 11.0,
-  },
 }
