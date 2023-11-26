@@ -41,16 +41,16 @@ local function tab_bar_style_for_appearance(appearance)
       window_frame = {
         font = wezterm.font { family = 'MonoLisa Variable', weight = 'Thin' },
         font_size = 9.0,
-        inactive_titlebar_bg = '#E0E0E0',            -- Adjust these for light theme
-        active_titlebar_bg = '#FFFFFF',              -- Adjust these for light theme
-        inactive_titlebar_fg = '#000000',            -- Adjust these for light theme
-        active_titlebar_fg = '#000000',              -- Adjust these for light theme
-        inactive_titlebar_border_bottom = '#D0D0D0', -- Adjust these for light theme
-        active_titlebar_border_bottom = '#D0D0D0',   -- Adjust these for light theme
-        button_fg = '#000000',                       -- Adjust these for light theme
-        button_bg = '#F0F0F0',                       -- Adjust these for light theme
-        button_hover_fg = '#000000',                 -- Adjust these for light theme
-        button_hover_bg = '#C0C0C0',                 -- Adjust these for light theme              -- Adjust these for light theme
+        inactive_titlebar_bg = '#E0E0E0',
+        active_titlebar_bg = '#FFFFFF',
+        inactive_titlebar_fg = '#000000',
+        active_titlebar_fg = '#000000',
+        inactive_titlebar_border_bottom = '#D0D0D0',
+        active_titlebar_border_bottom = '#D0D0D0',
+        button_fg = '#000000',
+        button_bg = '#F0F0F0',
+        button_hover_fg = '#000000',
+        button_hover_bg = '#C0C0C0',
       },
       colors = {
         tab_bar = {
@@ -71,13 +71,14 @@ return {
   color_scheme_dirs = { "~/.config/wezterm/colors" },
   color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
   window_frame = tab_bar_config.window_frame,
+  colors = tab_bar_config.colors,
   -- All of the MonoLisa features are documented on the download page of https://www.monolisa.dev
   harfbuzz_features = {
     "calt=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-calt
     "clig=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-clig
     "liga=1", -- Ligatures
     "zero=0", -- 0 with slash or dot
-    "ss01=0", -- * Asterisk normal or raised
+    "ss01=0", -- Asterisk normal or raised
     "ss02=0", -- Script variant of font
     "ss06=0", -- @ variants
     "ss07=1", -- {} variations
