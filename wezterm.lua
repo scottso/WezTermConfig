@@ -1,62 +1,71 @@
+-- Importing the wezterm module
 local wezterm = require("wezterm")
 local config = {}
--- https://wezfurlong.org/wezterm/colorschemes/index.html
+
+-- Function to set the color scheme based on the appearance (dark or light)
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
-    -- Dark theme
+    -- Returns OneDark (base16) theme for dark appearance
     return "OneDark (base16)"
   else
-    -- Light theme
+    -- Returns One Light (base16) theme for light appearance
     return "One Light (base16)"
   end
 end
 
+-- Function to set the tab bar style based on the appearance (dark or light)
 local function tab_bar_style_for_appearance(appearance)
   if appearance:find("Dark") then
-    -- OneDark (base16) theme tab bar style
+    -- Tab bar style for OneDark (base16) theme
     return {
-      active_titlebar_bg = '#282C34', -- Darker background
+      -- Tab bar colors and styles for dark theme
+      active_titlebar_bg = '#282C34',
       inactive_titlebar_bg = '#282C34',
-      inactive_tab_edge = '#ABB2BF',  -- Greyish color
+      inactive_tab_edge = '#ABB2BF',
       active_tab = {
-        bg_color = '#61AFEF',         -- Blue color for active tab background
-        fg_color = '#282C34',         -- Dark text for active tab
+        bg_color = '#61AFEF',
+        fg_color = '#282C34',
       },
       inactive_tab = {
-        bg_color = '#3E4451', -- Dark grey for inactive tab background
-        fg_color = '#ABB2BF', -- Lighter grey text for inactive tab
+        bg_color = '#3E4451',
+        fg_color = '#ABB2BF',
       },
     }
   else
-    -- One Light (base16) theme tab bar style
+    -- Tab bar style for One Light (base16) theme
     return {
-      active_titlebar_bg = '#FAFAFA', -- Light background
+      -- Tab bar colors and styles for light theme
+      active_titlebar_bg = '#FAFAFA',
       inactive_titlebar_bg = '#FAFAFA',
-      inactive_tab_edge = '#D3D3D3',  -- Light grey
+      inactive_tab_edge = '#D3D3D3',
       active_tab = {
-        bg_color = '#E06C75',         -- Red color for active tab background
-        fg_color = '#FAFAFA',         -- White text for active tab
+        bg_color = '#E06C75',
+        fg_color = '#FAFAFA',
       },
       inactive_tab = {
-        bg_color = '#E5E5E6', -- Very light grey for inactive tab background
-        fg_color = '#383A42', -- Dark grey text for inactive tab
+        bg_color = '#E5E5E6',
+        fg_color = '#383A42',
       },
     }
   end
 end
 
+-- Conditional config builder
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-config.front_end = "WebGpu" -- Render with Metal on macOS
+-- Front-end renderer configuration
+config.front_end = "WebGpu" -- Use WebGpu for rendering
 config.freetype_load_target = "Light"
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 
+-- Detect current appearance and apply the corresponding color scheme and tab style
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = scheme_for_appearance(appearance)
 local tab_style = tab_bar_style_for_appearance(appearance)
 
+-- Window frame configuration
 config.window_frame = {
   font = wezterm.font { family = 'MonoLisa Variable', weight = 'Thin' },
   font_size = 11.0,
@@ -64,13 +73,14 @@ config.window_frame = {
   inactive_titlebar_bg = tab_style.inactive_titlebar_bg,
 }
 
+-- Tab bar color configuration
 config.colors = {
   tab_bar = {
     inactive_tab_edge = tab_style.inactive_tab_edge,
   },
 }
 
--- All of the MonoLisa features are documented on the download page of https://www.monolisa.dev
+-- Font features configuration
 config.harfbuzz_features = {
   "calt=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-calt
   "clig=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-clig
@@ -85,11 +95,13 @@ config.harfbuzz_features = {
   "ss11=1", -- 0xF Alternate hex appearance
 }
 
+-- Main font configuration with fallback
 config.font = wezterm.font_with_fallback({
   { family = "MonoLisa Variable",      scale = 1.0, weight = "Regular" },
   { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
 })
 
+-- General configuration settings
 config.font_size = 13.0
 config.initial_rows = 32
 config.initial_cols = 88
@@ -99,7 +111,8 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
 config.audible_bell = "Disabled"
 config.window_close_confirmation = "AlwaysPrompt"
-config.window_background_opacity = 1 -- Range is 0.0 - 1
-config.window_decorations = "RESIZE" -- TITLE | RESIZE
+config.window_background_opacity = 1 -- Full opacity
+config.window_decorations = "RESIZE" -- Enable window resizing
 
+-- Return the final configuration
 return config
