@@ -69,7 +69,7 @@ local tab_style = tab_bar_style_for_appearance(appearance)
 
 -- Window frame configuration
 config.window_frame = {
-  font = wezterm.font { family = 'MonoLisa Variable', weight = 'Thin' },
+  font = wezterm.font { family = 'MonoLisa Variable', weight = 'Light' },
   font_size = 11.0,
   active_titlebar_bg = tab_style.active_titlebar_bg,
   inactive_titlebar_bg = tab_style.inactive_titlebar_bg,
