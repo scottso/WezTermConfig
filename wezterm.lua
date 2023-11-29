@@ -1,6 +1,5 @@
 -- Importing the wezterm module
 local wezterm = require("wezterm")
-local config = {}
 
 -- Function to set the color scheme based on the appearance (dark or light)
 local function scheme_for_appearance(appearance)
@@ -50,10 +49,13 @@ local function tab_bar_style_for_appearance(appearance)
   end
 end
 
+local config = {}
+
 -- Conditional config builder
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
+
 
 -- Front-end renderer configuration
 config.front_end = "WebGpu" -- Use WebGpu for rendering
@@ -77,6 +79,14 @@ config.window_frame = {
 config.colors = {
   tab_bar = {
     inactive_tab_edge = tab_style.inactive_tab_edge,
+    active_tab = {
+      bg_color = tab_style.active_tab.bg_color,
+      fg_color = tab_style.active_tab.fg_color
+    },
+    inactive_tab = {
+      fg_color = tab_style.inactive_tab.fg_color,
+      bg_color = tab_style.inactive_tab.bg_color
+    },
   },
 }
 
@@ -113,6 +123,7 @@ config.audible_bell = "Disabled"
 config.window_close_confirmation = "AlwaysPrompt"
 config.window_background_opacity = 1 -- Full opacity
 config.window_decorations = "RESIZE" -- Enable window resizing
+config.use_fancy_tab_bar = true
 
 -- Return the final configuration
 return config
