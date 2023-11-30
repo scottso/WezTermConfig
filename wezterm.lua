@@ -15,35 +15,33 @@ end
 -- Function to set the tab bar style based on the appearance (dark or light)
 local function tab_bar_style_for_appearance(appearance)
   if appearance:find("Dark") then
-    -- Tab bar style for OneDark (base16) theme
+    -- Tab bar style for tokyonight_moon (dark theme)
     return {
-      -- Tab bar colors and styles for dark theme
-      active_titlebar_bg = "#282C34",
-      inactive_titlebar_bg = "#282C34",
-      inactive_tab_edge = "#ABB2BF",
+      active_titlebar_bg = "#222436", -- Dark scheme background
+      inactive_titlebar_bg = "#222436", -- Same as active for consistency
+      inactive_tab_edge = "#1e2030", -- Dark scheme inactive_tab_edge
       active_tab = {
-        bg_color = "#61AFEF",
-        fg_color = "#282C34",
+        bg_color = "#82aaff", -- Dark scheme active_tab bg_color
+        fg_color = "#1e2030", -- Dark scheme active_tab fg_color
       },
       inactive_tab = {
-        bg_color = "#3E4451",
-        fg_color = "#ABB2BF",
+        bg_color = "#2f334d", -- Dark scheme inactive_tab bg_color
+        fg_color = "#545c7e", -- Dark scheme inactive_tab fg_color
       },
     }
   else
-    -- Tab bar style for One Light (base16) theme
+    -- Tab bar style for tokyonight_day (light theme)
     return {
-      -- Tab bar colors and styles for light theme
-      active_titlebar_bg = "#FAFAFA",
-      inactive_titlebar_bg = "#FAFAFA",
-      inactive_tab_edge = "#D3D3D3",
+      active_titlebar_bg = "#e1e2e7", -- Light scheme background
+      inactive_titlebar_bg = "#e1e2e7", -- Same as active for consistency
+      inactive_tab_edge = "#e9e9ec", -- Light scheme inactive_tab_edge
       active_tab = {
-        bg_color = "#E06C75",
-        fg_color = "#FAFAFA",
+        bg_color = "#2e7de9", -- Light scheme active_tab bg_color
+        fg_color = "#e9e9ec", -- Light scheme active_tab fg_color
       },
       inactive_tab = {
-        bg_color = "#E5E5E6",
-        fg_color = "#383A42",
+        bg_color = "#c4c8da", -- Light scheme inactive_tab bg_color
+        fg_color = "#8990b3", -- Light scheme inactive_tab fg_color
       },
     }
   end
