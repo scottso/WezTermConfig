@@ -5,10 +5,10 @@ local wezterm = require("wezterm")
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Returns OneDark (base16) theme for dark appearance
-    return "OneDark (base16)"
+    return "tokyonight_moon"
   else
     -- Returns One Light (base16) theme for light appearance
-    return "One Light (base16)"
+    return "tokyonight_day"
   end
 end
 
@@ -18,32 +18,32 @@ local function tab_bar_style_for_appearance(appearance)
     -- Tab bar style for OneDark (base16) theme
     return {
       -- Tab bar colors and styles for dark theme
-      active_titlebar_bg = '#282C34',
-      inactive_titlebar_bg = '#282C34',
-      inactive_tab_edge = '#ABB2BF',
+      active_titlebar_bg = "#282C34",
+      inactive_titlebar_bg = "#282C34",
+      inactive_tab_edge = "#ABB2BF",
       active_tab = {
-        bg_color = '#61AFEF',
-        fg_color = '#282C34',
+        bg_color = "#61AFEF",
+        fg_color = "#282C34",
       },
       inactive_tab = {
-        bg_color = '#3E4451',
-        fg_color = '#ABB2BF',
+        bg_color = "#3E4451",
+        fg_color = "#ABB2BF",
       },
     }
   else
     -- Tab bar style for One Light (base16) theme
     return {
       -- Tab bar colors and styles for light theme
-      active_titlebar_bg = '#FAFAFA',
-      inactive_titlebar_bg = '#FAFAFA',
-      inactive_tab_edge = '#D3D3D3',
+      active_titlebar_bg = "#FAFAFA",
+      inactive_titlebar_bg = "#FAFAFA",
+      inactive_tab_edge = "#D3D3D3",
       active_tab = {
-        bg_color = '#E06C75',
-        fg_color = '#FAFAFA',
+        bg_color = "#E06C75",
+        fg_color = "#FAFAFA",
       },
       inactive_tab = {
-        bg_color = '#E5E5E6',
-        fg_color = '#383A42',
+        bg_color = "#E5E5E6",
+        fg_color = "#383A42",
       },
     }
   end
@@ -55,7 +55,6 @@ local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
-
 
 -- Front-end renderer configuration
 config.front_end = "WebGpu" -- Use WebGpu for rendering
@@ -69,7 +68,7 @@ local tab_style = tab_bar_style_for_appearance(appearance)
 
 -- Window frame configuration
 config.window_frame = {
-  font = wezterm.font { family = 'MonoLisa Variable', weight = 'Light' },
+  font = wezterm.font({ family = "MonoLisa Variable", weight = "Light" }),
   font_size = 11.0,
   active_titlebar_bg = tab_style.active_titlebar_bg,
   inactive_titlebar_bg = tab_style.inactive_titlebar_bg,
@@ -81,11 +80,11 @@ config.colors = {
     inactive_tab_edge = tab_style.inactive_tab_edge,
     active_tab = {
       bg_color = tab_style.active_tab.bg_color,
-      fg_color = tab_style.active_tab.fg_color
+      fg_color = tab_style.active_tab.fg_color,
     },
     inactive_tab = {
       fg_color = tab_style.inactive_tab.fg_color,
-      bg_color = tab_style.inactive_tab.bg_color
+      bg_color = tab_style.inactive_tab.bg_color,
     },
   },
 }
@@ -107,7 +106,7 @@ config.harfbuzz_features = {
 
 -- Main font configuration with fallback
 config.font = wezterm.font_with_fallback({
-  { family = "MonoLisa Variable",      scale = 1.0, weight = "Regular" },
+  { family = "MonoLisa Variable", scale = 1.0, weight = "Regular" },
   { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
 })
 
