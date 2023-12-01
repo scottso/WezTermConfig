@@ -104,7 +104,7 @@ config.harfbuzz_features = {
 
 -- Main font configuration with fallback
 config.font = wezterm.font_with_fallback({
-  { family = "MonoLisa Variable", scale = 1.0, weight = "Regular" },
+  { family = "MonoLisa Variable", scale = 1.0, weight = "Medium" },
   { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
 })
 
