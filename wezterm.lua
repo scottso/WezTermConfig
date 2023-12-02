@@ -5,10 +5,10 @@ local wezterm = require("wezterm")
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Returns OneDark (base16) theme for dark appearance
-    return "nightfox"
+    return "Gruvbox dark, soft (base16)"
   else
     -- Returns One Light (base16) theme for light appearance
-    return "dayfox"
+    return "Gruvbox light, soft (base16)"
   end
 end
 
