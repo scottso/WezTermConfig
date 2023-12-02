@@ -118,7 +118,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
 config.audible_bell = "Disabled"
 config.window_close_confirmation = "AlwaysPrompt"
-config.window_background_opacity = 0.9 -- Full opacity
+config.window_background_opacity = 1 -- Full opacity
 config.window_decorations = "RESIZE" -- Enable window resizing
 config.use_fancy_tab_bar = true
 
