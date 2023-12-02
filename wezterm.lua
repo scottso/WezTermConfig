@@ -5,10 +5,10 @@ local wezterm = require("wezterm")
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Returns OneDark (base16) theme for dark appearance
-    return "Everforest Dark (Gogh)"
+    return "tokyonight_storm"
   else
     -- Returns One Light (base16) theme for light appearance
-    return "Everforest Light (Gogh)"
+    return "tokyonight_day"
   end
 end
 
@@ -104,7 +104,7 @@ config.harfbuzz_features = {
 
 -- Main font configuration with fallback
 config.font = wezterm.font_with_fallback({
-  { family = "MonoLisa Variable",      scale = 1.0, weight = "Regular" },
+  { family = "MonoLisa Variable", scale = 1.0, weight = "Regular" },
   { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
 })
 
