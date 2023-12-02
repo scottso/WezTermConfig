@@ -27,8 +27,6 @@ brights = [
   "#54433A"
 ]
 
-[colors.indexed]
-
 [metadata]
 name = 'melange_light'
 origin_url = 'https://github.com/savq/melange-nvim/blob/master/term/wezterm/melange_light.toml'
