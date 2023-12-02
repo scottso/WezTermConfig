@@ -5,10 +5,10 @@ local wezterm = require("wezterm")
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Returns OneDark (base16) theme for dark appearance
-    return "tokyonight_storm"
+    return "Everforest Dark (Gogh)"
   else
     -- Returns One Light (base16) theme for light appearance
-    return "tokyonight_day"
+    return "Everforest Light (Gogh)"
   end
 end
 
@@ -17,12 +17,12 @@ local function tab_bar_style_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Tab bar style for tokyonight_moon (dark theme)
     return {
-      active_titlebar_bg = "#222436", -- Dark scheme background
+      active_titlebar_bg = "#222436",   -- Dark scheme background
       inactive_titlebar_bg = "#222436", -- Same as active for consistency
-      inactive_tab_edge = "#1e2030", -- Dark scheme inactive_tab_edge
+      inactive_tab_edge = "#1e2030",    -- Dark scheme inactive_tab_edge
       active_tab = {
-        bg_color = "#82aaff", -- Dark scheme active_tab bg_color
-        fg_color = "#1e2030", -- Dark scheme active_tab fg_color
+        bg_color = "#82aaff",           -- Dark scheme active_tab bg_color
+        fg_color = "#1e2030",           -- Dark scheme active_tab fg_color
       },
       inactive_tab = {
         bg_color = "#2f334d", -- Dark scheme inactive_tab bg_color
@@ -32,12 +32,12 @@ local function tab_bar_style_for_appearance(appearance)
   else
     -- Tab bar style for tokyonight_day (light theme)
     return {
-      active_titlebar_bg = "#e1e2e7", -- Light scheme background
+      active_titlebar_bg = "#e1e2e7",   -- Light scheme background
       inactive_titlebar_bg = "#e1e2e7", -- Same as active for consistency
-      inactive_tab_edge = "#e9e9ec", -- Light scheme inactive_tab_edge
+      inactive_tab_edge = "#e9e9ec",    -- Light scheme inactive_tab_edge
       active_tab = {
-        bg_color = "#2e7de9", -- Light scheme active_tab bg_color
-        fg_color = "#e9e9ec", -- Light scheme active_tab fg_color
+        bg_color = "#2e7de9",           -- Light scheme active_tab bg_color
+        fg_color = "#e9e9ec",           -- Light scheme active_tab fg_color
       },
       inactive_tab = {
         bg_color = "#c4c8da", -- Light scheme inactive_tab bg_color
@@ -104,7 +104,7 @@ config.harfbuzz_features = {
 
 -- Main font configuration with fallback
 config.font = wezterm.font_with_fallback({
-  { family = "MonoLisa Variable", scale = 1.0, weight = "Regular" },
+  { family = "MonoLisa Variable",      scale = 1.0, weight = "Regular" },
   { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
 })
 
