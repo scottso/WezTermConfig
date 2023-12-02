@@ -17,31 +17,31 @@ local function tab_bar_style_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Tab bar style for tokyonight_moon (dark theme)
     return {
-      active_titlebar_bg = "#222436",   -- Dark scheme background
-      inactive_titlebar_bg = "#222436", -- Same as active for consistency
-      inactive_tab_edge = "#1e2030",    -- Dark scheme inactive_tab_edge
+      active_titlebar_bg = "#222436",
+      inactive_titlebar_bg = "#222436",
+      inactive_tab_edge = "#1e2030",
       active_tab = {
-        bg_color = "#82aaff",           -- Dark scheme active_tab bg_color
-        fg_color = "#1e2030",           -- Dark scheme active_tab fg_color
+        bg_color = "#82aaff",
+        fg_color = "#1e2030",
       },
       inactive_tab = {
-        bg_color = "#2f334d", -- Dark scheme inactive_tab bg_color
-        fg_color = "#545c7e", -- Dark scheme inactive_tab fg_color
+        bg_color = "#2f334d",
+        fg_color = "#545c7e",
       },
     }
   else
     -- Tab bar style for tokyonight_day (light theme)
     return {
-      active_titlebar_bg = "#e1e2e7",   -- Light scheme background
-      inactive_titlebar_bg = "#e1e2e7", -- Same as active for consistency
-      inactive_tab_edge = "#e9e9ec",    -- Light scheme inactive_tab_edge
+      active_titlebar_bg = "#e1e2e7",
+      inactive_titlebar_bg = "#e1e2e7",
+      inactive_tab_edge = "#e9e9ec",
       active_tab = {
-        bg_color = "#2e7de9",           -- Light scheme active_tab bg_color
-        fg_color = "#e9e9ec",           -- Light scheme active_tab fg_color
+        bg_color = "#2e7de9",
+        fg_color = "#e9e9ec",
       },
       inactive_tab = {
-        bg_color = "#c4c8da", -- Light scheme inactive_tab bg_color
-        fg_color = "#8990b3", -- Light scheme inactive_tab fg_color
+        bg_color = "#c4c8da",
+        fg_color = "#8990b3",
       },
     }
   end
