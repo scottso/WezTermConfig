@@ -110,8 +110,8 @@ config.font = wezterm.font_with_fallback({
 
 -- General configuration settings
 config.font_size = 13.0
-config.initial_rows = 32
-config.initial_cols = 88
+config.initial_rows = 42
+config.initial_cols = 100
 config.scrollback_lines = 5000
 config.adjust_window_size_when_changing_font_size = false
 config.hide_tab_bar_if_only_one_tab = true
