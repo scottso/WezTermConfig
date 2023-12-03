@@ -15,33 +15,57 @@ end
 -- Function to set the tab bar style based on the appearance (dark or light)
 local function tab_bar_style_for_appearance(appearance)
   if appearance:find("Dark") then
-    -- Tab bar style for tokyonight_moon (dark theme)
+    -- Tab bar style for dark theme
     return {
-      active_titlebar_bg = "#222436",
-      inactive_titlebar_bg = "#222436",
-      inactive_tab_edge = "#1e2030",
+      active_titlebar_bg = "#131a24",
+      inactive_titlebar_bg = "#131a24",
+      inactive_tab_edge = "#131a24",
       active_tab = {
-        bg_color = "#82aaff",
-        fg_color = "#1e2030",
+        bg_color = "#71839b",
+        fg_color = "#192330",
       },
       inactive_tab = {
-        bg_color = "#2f334d",
-        fg_color = "#545c7e",
+        bg_color = "#212e3f",
+        fg_color = "#aeafb0",
+      },
+      inactive_tab_hover = {
+        bg_color = "#29394f",
+        fg_color = "#cdcecf",
+      },
+      new_tab = {
+        bg_color = "#192330",
+        fg_color = "#aeafb0",
+      },
+      new_tab_hover = {
+        bg_color = "#29394f",
+        fg_color = "#cdcecf",
       },
     }
   else
-    -- Tab bar style for tokyonight_day (light theme)
+    -- Tab bar style for light theme
     return {
-      active_titlebar_bg = "#e1e2e7",
-      inactive_titlebar_bg = "#e1e2e7",
-      inactive_tab_edge = "#e9e9ec",
+      active_titlebar_bg = "#e4dcd4",
+      inactive_titlebar_bg = "#e4dcd4",
+      inactive_tab_edge = "#e4dcd4",
       active_tab = {
-        bg_color = "#2e7de9",
-        fg_color = "#e9e9ec",
+        bg_color = "#824d5b",
+        fg_color = "#f6f2ee",
       },
       inactive_tab = {
-        bg_color = "#c4c8da",
-        fg_color = "#8990b3",
+        bg_color = "#dbd1dd",
+        fg_color = "#643f61",
+      },
+      inactive_tab_hover = {
+        bg_color = "#d3c7bb",
+        fg_color = "#3d2b5a",
+      },
+      new_tab = {
+        bg_color = "#f6f2ee",
+        fg_color = "#643f61",
+      },
+      new_tab_hover = {
+        bg_color = "#d3c7bb",
+        fg_color = "#3d2b5a",
       },
     }
   end
