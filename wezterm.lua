@@ -4,11 +4,11 @@ local wezterm = require("wezterm")
 -- Function to set the color scheme based on the appearance (dark or light)
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
-    -- Returns OneDark (base16) theme for dark appearance
-    return "OneDark (base16)"
+    -- Dark theme
+    return "nightfox"
   else
-    -- Returns One Light (base16) theme for light appearance
-    return "One Light (base16)"
+    -- Light theme
+    return "dayfox"
   end
 end
 
