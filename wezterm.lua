@@ -122,5 +122,16 @@ config.window_background_opacity = 1 -- Full opacity
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = true
 
+-- Moving tabs
+config.keys = {}
+for i = 1, 8 do
+  -- CTRL+ALT + number to move to that position
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = "CTRL|ALT",
+    action = wezterm.action.MoveTab(i - 1),
+  })
+end
+
 -- Return the final configuration
 return config
