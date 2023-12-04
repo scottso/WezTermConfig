@@ -118,7 +118,7 @@ config.harfbuzz_features = {
   "liga=1", -- Ligatures
   "zero=0", -- 0 with slash or dot
   "ss01=0", -- Asterisk normal or raised
-  "ss02=0", -- Script variant of font
+  "ss02=1", -- Script variant of font
   "ss06=0", -- @ variants
   "ss07=1", -- {} variations
   "ss08=1", -- () variations
@@ -133,7 +133,7 @@ config.font = wezterm.font_with_fallback({
 })
 
 -- General configuration settings
-config.font_size = 13.0
+config.font_size = 14.0
 config.initial_rows = 42
 config.initial_cols = 100
 config.scrollback_lines = 5000
