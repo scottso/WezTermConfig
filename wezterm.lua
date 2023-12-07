@@ -145,6 +145,7 @@ config.window_close_confirmation = "AlwaysPrompt"
 config.window_background_opacity = 1 -- Full opacity
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = true
+config.term = "wezterm"
 
 -- Moving tabs
 config.keys = {}
