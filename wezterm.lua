@@ -143,7 +143,7 @@ config.tab_bar_at_bottom = false
 config.audible_bell = "Disabled"
 config.window_close_confirmation = "AlwaysPrompt"
 config.window_background_opacity = 1 -- Full opacity
-config.window_decorations = "RESIZE"
+config.window_decorations = "RESIZE|TITLE"
 config.use_fancy_tab_bar = true
 config.term = "wezterm"
 
