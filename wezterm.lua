@@ -86,30 +86,30 @@ config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 -- Detect current appearance and apply the corresponding color scheme and tab style
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = scheme_for_appearance(appearance)
-local tab_style = tab_bar_style_for_appearance(appearance)
+-- local tab_style = tab_bar_style_for_appearance(appearance)
 
 -- Window frame configuration
 config.window_frame = {
   font = wezterm.font({ family = "MonoLisa Variable", weight = "Black" }),
   font_size = 10.0,
-  active_titlebar_bg = tab_style.active_titlebar_bg,
-  inactive_titlebar_bg = tab_style.inactive_titlebar_bg,
+  -- active_titlebar_bg = tab_style.active_titlebar_bg,
+  -- inactive_titlebar_bg = tab_style.inactive_titlebar_bg,
 }
 
 -- Tab bar color configuration
-config.colors = {
-  tab_bar = {
-    inactive_tab_edge = tab_style.inactive_tab_edge,
-    active_tab = {
-      bg_color = tab_style.active_tab.bg_color,
-      fg_color = tab_style.active_tab.fg_color,
-    },
-    inactive_tab = {
-      fg_color = tab_style.inactive_tab.fg_color,
-      bg_color = tab_style.inactive_tab.bg_color,
-    },
-  },
-}
+-- config.colors = {
+--   tab_bar = {
+--     inactive_tab_edge = tab_style.inactive_tab_edge,
+--     active_tab = {
+--       bg_color = tab_style.active_tab.bg_color,
+--       fg_color = tab_style.active_tab.fg_color,
+--     },
+--     inactive_tab = {
+--       fg_color = tab_style.inactive_tab.fg_color,
+--       bg_color = tab_style.inactive_tab.bg_color,
+--     },
+--   },
+-- }
 
 -- Font features configuration
 config.harfbuzz_features = {
