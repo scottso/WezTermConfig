@@ -12,65 +12,6 @@ local function scheme_for_appearance(appearance)
   end
 end
 
--- Function to set the tab bar style based on the appearance (dark or light)
-local function tab_bar_style_for_appearance(appearance)
-  if appearance:find("Dark") then
-    -- Tab bar style for dark theme
-    return {
-      active_titlebar_bg = "#131a24",
-      inactive_titlebar_bg = "#131a24",
-      inactive_tab_edge = "#131a24",
-      active_tab = {
-        bg_color = "#71839b",
-        fg_color = "#192330",
-      },
-      inactive_tab = {
-        bg_color = "#212e3f",
-        fg_color = "#aeafb0",
-      },
-      inactive_tab_hover = {
-        bg_color = "#29394f",
-        fg_color = "#cdcecf",
-      },
-      new_tab = {
-        bg_color = "#192330",
-        fg_color = "#aeafb0",
-      },
-      new_tab_hover = {
-        bg_color = "#29394f",
-        fg_color = "#cdcecf",
-      },
-    }
-  else
-    -- Tab bar style for light theme
-    return {
-      active_titlebar_bg = "#e4dcd4",
-      inactive_titlebar_bg = "#e4dcd4",
-      inactive_tab_edge = "#e4dcd4",
-      active_tab = {
-        bg_color = "#824d5b",
-        fg_color = "#f6f2ee",
-      },
-      inactive_tab = {
-        bg_color = "#dbd1dd",
-        fg_color = "#643f61",
-      },
-      inactive_tab_hover = {
-        bg_color = "#d3c7bb",
-        fg_color = "#3d2b5a",
-      },
-      new_tab = {
-        bg_color = "#f6f2ee",
-        fg_color = "#643f61",
-      },
-      new_tab_hover = {
-        bg_color = "#d3c7bb",
-        fg_color = "#3d2b5a",
-      },
-    }
-  end
-end
-
 local config = {}
 
 -- Conditional config builder
@@ -86,30 +27,12 @@ config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 -- Detect current appearance and apply the corresponding color scheme and tab style
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = scheme_for_appearance(appearance)
--- local tab_style = tab_bar_style_for_appearance(appearance)
 
 -- Window frame configuration
 config.window_frame = {
   font = wezterm.font({ family = "MonoLisa Variable", weight = "Black" }),
   font_size = 10.0,
-  -- active_titlebar_bg = tab_style.active_titlebar_bg,
-  -- inactive_titlebar_bg = tab_style.inactive_titlebar_bg,
 }
-
--- Tab bar color configuration
--- config.colors = {
---   tab_bar = {
---     inactive_tab_edge = tab_style.inactive_tab_edge,
---     active_tab = {
---       bg_color = tab_style.active_tab.bg_color,
---       fg_color = tab_style.active_tab.fg_color,
---     },
---     inactive_tab = {
---       fg_color = tab_style.inactive_tab.fg_color,
---       bg_color = tab_style.inactive_tab.bg_color,
---     },
---   },
--- }
 
 -- Font features configuration
 config.harfbuzz_features = {
