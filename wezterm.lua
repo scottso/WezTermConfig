@@ -18,8 +18,6 @@ end
 -- Front-end renderer configuration
 config.front_end = "WebGpu" -- Use WebGpu for rendering
 config.webgpu_power_preference = "HighPerformance"
-config.cursor_blink_ease_in = "Constant"
-config.cursor_blink_ease_out = "Constant"
 config.freetype_load_target = "Light"
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
@@ -86,11 +84,13 @@ config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = true
 config.term = "wezterm"
 config.underline_thickness = 3
-config.cursor_thickness = 4
 config.underline_position = -6
 config.bold_brightens_ansi_colors = true
 config.default_cursor_style = "BlinkingBar"
 config.force_reverse_video_cursor = true
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
+config.cursor_thickness = 3
 config.window_padding = { left = 5, right = 5, top = 5, bottom = 5 }
 
 -- Moving tabs
