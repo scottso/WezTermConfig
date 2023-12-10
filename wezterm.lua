@@ -8,10 +8,10 @@ require("links").setup(config)
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Dark theme
-    return "OneDark (base16)"
+    return "nightfox"
   else
     -- Light theme
-    return "One Light (base16)"
+    return "dayfox"
   end
 end
 
@@ -22,6 +22,7 @@ config.freetype_load_target = "Light"
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
 -- config.color_scheme_dirs = { "~/git/tokyonight.nvim/extras/wezterm" }
+config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = scheme_for_appearance(appearance)
 
