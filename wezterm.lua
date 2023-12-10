@@ -8,10 +8,10 @@ require("links").setup(config)
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Dark theme
-    return "Gruvbox dark, medium (base16)"
+    return "rose-pine"
   else
     -- Light theme
-    return "Gruvbox dark, medium (base16)"
+    return "rose-pine-dawn"
   end
 end
 
