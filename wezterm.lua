@@ -8,10 +8,10 @@ require("links").setup(config)
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Dark theme
-    return "rose-pine"
+    return "OneDark (base16)"
   else
     -- Light theme
-    return "rose-pine-dawn"
+    return "One Light (base16)"
   end
 end
 
