@@ -8,7 +8,7 @@ require("links").setup(config)
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Dark theme
-    return "tokyonight-storm"
+    return "tokyonight_moon"
   else
     -- Light theme
     return "tokyonight-day"
