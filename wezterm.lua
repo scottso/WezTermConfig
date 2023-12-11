@@ -8,10 +8,10 @@ require("links").setup(config)
 local function scheme_for_appearance(appearance)
   if appearance:find("Dark") then
     -- Dark theme
-    return "nightfox"
+    return "tokyonight-storm"
   else
     -- Light theme
-    return "dayfox"
+    return "tokyonight-day"
   end
 end
 
@@ -21,8 +21,8 @@ config.webgpu_power_preference = "HighPerformance"
 config.freetype_load_target = "Light"
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
--- config.color_scheme_dirs = { "~/git/tokyonight.nvim/extras/wezterm" }
-config.color_scheme_dirs = { "~/.config/wezterm/colors" }
+config.color_scheme_dirs = { "~/git/tokyonight.nvim/extras/wezterm" }
+-- config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = scheme_for_appearance(appearance)
 
