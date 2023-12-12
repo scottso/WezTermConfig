@@ -83,7 +83,7 @@ config.font = wezterm.font_with_fallback({
 })
 -- Window frame configuration
 config.window_frame = {
-    font = wezterm.font({ family = "MonoLisa Variable", weight = "Black" }),
+    font = wezterm.font({ family = "MonoLisa Variable", weight = "Regular" }),
     font_size = 10.0,
     active_titlebar_bg = tab_style.active_titlebar_bg,
     inactive_titlebar_bg = tab_style.inactive_titlebar_bg,
@@ -104,21 +104,36 @@ config.colors = {
     },
 }
 
+-- Use different font for cursive lettering
 config.font_rules = {
     {
-        intensity = "Bold",
+        intensity = 'Bold',
         italic = true,
-        font = wezterm.font({ family = "MonoLisa Variable", weight = "Bold", style = "Italic" }),
+        font = wezterm.font {
+            family = 'Monaspace Radon',
+            weight = 'Bold',
+            style = 'Italic',
+            scale = 1.1,
+        },
     },
     {
         italic = true,
-        intensity = "Half",
-        font = wezterm.font({ family = "MonoLisa Variable", weight = "DemiBold", style = "Italic" }),
+        intensity = 'Half',
+        font = wezterm.font {
+            family = 'Monaspace Radon',
+            weight = 'DemiBold',
+            style = 'Italic',
+            scale = 1.1,
+        },
     },
     {
         italic = true,
-        intensity = "Normal",
-        font = wezterm.font({ family = "MonoLisa Variable", style = "Italic" }),
+        intensity = 'Normal',
+        font = wezterm.font {
+            family = 'Monaspace Radon',
+            style = 'Italic',
+            scale = 1.1,
+        },
     },
 }
 
