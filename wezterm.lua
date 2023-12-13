@@ -113,7 +113,6 @@ config.font_rules = {
             family = 'Monaspace Radon Var',
             weight = 'Bold',
             style = 'Italic',
-            scale = 1.1,
         },
     },
     {
@@ -123,7 +122,6 @@ config.font_rules = {
             family = 'Monaspace Radon Var',
             weight = 'DemiBold',
             style = 'Italic',
-            scale = 1.1,
         },
     },
     {
@@ -132,7 +130,6 @@ config.font_rules = {
         font = wezterm.font {
             family = 'Monaspace Radon Var',
             style = 'Italic',
-            scale = 1.1,
         },
     },
 }
