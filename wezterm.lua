@@ -53,7 +53,7 @@ end
 -- Front-end renderer configuration
 config.front_end = "WebGpu" -- Use WebGpu for rendering
 config.webgpu_power_preference = "HighPerformance"
-config.freetype_load_target = "Light"
+config.freetype_load_target = 'Normal'
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
 --config.color_scheme_dirs = { "~/git/tokyonight.nvim/extras/wezterm" }
