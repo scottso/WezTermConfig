@@ -8,10 +8,10 @@ require("links").setup(config)
 local function scheme_for_appearance(appearance)
     if appearance:find("Dark") then
         -- Dark theme
-        return "tokyonight_moon"
+        return "Catppuccin Macchiato"
     else
         -- Light theme
-        return "tokyonight-day"
+        return "Catppuccin Latte"
     end
 end
 
@@ -56,7 +56,8 @@ config.webgpu_power_preference = "HighPerformance"
 config.freetype_load_target = "Light"
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
-config.color_scheme_dirs = { "~/git/tokyonight.nvim/extras/wezterm" }
+--config.color_scheme_dirs = { "~/git/tokyonight.nvim/extras/wezterm" }
+config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = scheme_for_appearance(appearance)
 local tab_style = tab_bar_style_for_appearance(appearance)
@@ -105,34 +106,34 @@ config.colors = {
 }
 
 -- Use different font for cursive lettering
-config.font_rules = {
-    {
-        intensity = 'Bold',
-        italic = true,
-        font = wezterm.font {
-            family = 'Monaspace Radon Var',
-            weight = 'Bold',
-            style = 'Italic',
-        },
-    },
-    {
-        italic = true,
-        intensity = 'Half',
-        font = wezterm.font {
-            family = 'Monaspace Radon Var',
-            weight = 'DemiBold',
-            style = 'Italic',
-        },
-    },
-    {
-        italic = true,
-        intensity = 'Normal',
-        font = wezterm.font {
-            family = 'Monaspace Radon Var',
-            style = 'Italic',
-        },
-    },
-}
+-- config.font_rules = {
+--     {
+--         intensity = 'Bold',
+--         italic = true,
+--         font = wezterm.font {
+--             family = 'Monaspace Radon Var',
+--             weight = 'Bold',
+--             style = 'Italic',
+--         },
+--     },
+--     {
+--         italic = true,
+--         intensity = 'Half',
+--         font = wezterm.font {
+--             family = 'Monaspace Radon Var',
+--             weight = 'DemiBold',
+--             style = 'Italic',
+--         },
+--     },
+--     {
+--         italic = true,
+--         intensity = 'Normal',
+--         font = wezterm.font {
+--             family = 'Monaspace Radon Var',
+--             style = 'Italic',
+--         },
+--     },
+-- }
 
 -- General configuration settings
 config.font_size = 14.0
