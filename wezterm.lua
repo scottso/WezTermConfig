@@ -79,7 +79,7 @@ config.harfbuzz_features = {
 
 -- Main font configuration with fallback
 config.font = wezterm.font_with_fallback({
-    { family = "MonoLisa Variable",      scale = 1.0, weight = "Regular" },
+    { family = "MonoLisa Variable",      scale = 1.0, weight = "Medium" },
     { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
 })
 -- Window frame configuration
@@ -136,7 +136,7 @@ config.colors = {
 -- }
 
 -- General configuration settings
-config.font_size = 14.0
+config.font_size = 13.0
 config.initial_rows = 42
 config.initial_cols = 100
 config.scrollback_lines = 5000
