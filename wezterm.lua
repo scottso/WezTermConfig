@@ -144,7 +144,7 @@ config.colors = {
 -- }
 
 -- General configuration settings
-config.font_size = 16.0
+config.font_size = 17.0
 config.initial_rows = 42
 config.initial_cols = 100
 config.scrollback_lines = 5000
