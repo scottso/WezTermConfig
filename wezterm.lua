@@ -158,7 +158,6 @@ config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = true
 config.term = "wezterm"
 config.underline_thickness = 2
-config.underline_position = -6
 config.bold_brightens_ansi_colors = true
 config.default_cursor_style = "BlinkingBar"
 config.force_reverse_video_cursor = false
