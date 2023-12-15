@@ -53,7 +53,7 @@ end
 -- Front-end renderer configuration
 config.front_end = "WebGpu" -- Use WebGpu for rendering
 config.webgpu_power_preference = "HighPerformance"
-config.freetype_load_target = 'Normal'
+config.freetype_load_target = "Normal"
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
 --config.color_scheme_dirs = { "~/git/tokyonight.nvim/extras/wezterm" }
@@ -64,28 +64,36 @@ local tab_style = tab_bar_style_for_appearance(appearance)
 
 -- Font features configuration
 config.harfbuzz_features = {
-    "calt=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-calt
-    "clig=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-clig
-    "liga=1", -- Ligatures
-    "zero=0", -- 0 with slash or dot
-    "ss01=0", -- Asterisk normal or raised
-    "ss02=0", -- Script variant of font
-    "ss06=0", -- @ variants
-    "ss07=1", -- {} variations
-    "ss08=1", -- () variations
-    "ss09=1", -- >= 2 sharacters wide or not
-    "ss11=1", -- 0xF Alternate hex appearance
+    -- MonoLisa settings
+    --"calt=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-calt
+    --"clig=1", -- https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#tag-clig
+    --"liga=1", -- Ligatures
+    --"zero=0", -- 0 with slash or dot
+    --"ss01=0", -- Asterisk normal or raised
+    --"ss02=0", -- Script variant of font
+    --"ss06=0", -- @ variants
+    --"ss07=1", -- {} variations
+    --"ss08=1", -- () variations
+    --"ss09=1", -- >= 2 sharacters wide or not
+    --"ss11=1", -- 0xF Alternate hex appearance
+
+    -- PragmataPro settings
+    -- https://github.com/fabrizioschiavi/pragmatapro/blob/master/useful_files/Handbook.png
+    "calt=1", --Ligatures
+    "cv03=1", -- Alt &
+    "ss13=1", -- Better line drawing
 }
 
 -- Main font configuration with fallback
-config.font = wezterm.font_with_fallback({
-    { family = "MonoLisa Variable",      scale = 1.0, weight = "Medium" },
-    { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
-})
+--config.font = wezterm.font_with_fallback({
+--    { family = "PragmataPro Liga",       scale = 1.0, weight = "Regular" },
+--    { family = "Symbols Nerd Font Mono", scale = 1.0, weight = "Regular" },
+--})
+config.font = wezterm.font("PragmataPro Liga", { weight = "Regular" })
 -- Window frame configuration
 config.window_frame = {
-    font = wezterm.font({ family = "MonoLisa Variable", weight = "Regular" }),
-    font_size = 10.0,
+    font = wezterm.font({ family = "PragmataPro", weight = "Light" }),
+    font_size = 12.0,
     active_titlebar_bg = tab_style.active_titlebar_bg,
     inactive_titlebar_bg = tab_style.inactive_titlebar_bg,
 }
@@ -136,7 +144,7 @@ config.colors = {
 -- }
 
 -- General configuration settings
-config.font_size = 13.0
+config.font_size = 16.0
 config.initial_rows = 42
 config.initial_cols = 100
 config.scrollback_lines = 5000
