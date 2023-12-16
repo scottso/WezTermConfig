@@ -18,8 +18,8 @@ end
 -- Front-end renderer configuration
 config.front_end = "WebGpu" -- Use WebGpu for rendering
 config.webgpu_power_preference = "HighPerformance"
-config.freetype_load_target = "HorizontalLcd"
-config.freetype_load_flags = "NO_BITMAP|NO_HINTING"
+-- config.freetype_load_target = "HorizontalLcd"
+-- config.freetype_load_flags = "NO_BITMAP|NO_HINTING"
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
 config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
@@ -36,11 +36,8 @@ config.harfbuzz_features = {
 }
 
 -- Main font configuration with fallback
-config.font = wezterm.font("PragmataPro Liga", {
-    weight = "Regular", -- https://wezfurlong.org/wezterm/config/lua/wezterm/font.html
-    style = "Normal",
-})
-config.font_size = 14.0
+config.font = wezterm.font("PragmataPro Liga", { style = "Normal" })
+config.font_size = 16.0
 config.bold_brightens_ansi_colors = true
 
 -- General configuration settings
