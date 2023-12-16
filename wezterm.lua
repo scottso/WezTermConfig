@@ -40,7 +40,7 @@ config.font = wezterm.font("PragmataPro Liga", {
     weight = "Regular", -- https://wezfurlong.org/wezterm/config/lua/wezterm/font.html
     style = "Normal",
 })
-config.font_size = 16.0
+config.font_size = 14.0
 config.bold_brightens_ansi_colors = true
 
 -- General configuration settings
