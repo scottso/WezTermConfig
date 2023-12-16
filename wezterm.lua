@@ -18,8 +18,8 @@ end
 -- Front-end renderer configuration
 config.front_end = "WebGpu" -- Use WebGpu for rendering
 config.webgpu_power_preference = "HighPerformance"
-config.freetype_load_target = "Normal"
-config.freetype_load_flags = "DEFAULT"
+config.freetype_load_target = "HorizontalLcd"
+config.freetype_load_flags = "NO_BITMAP|NO_HINTING"
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
 config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
