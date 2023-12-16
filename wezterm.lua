@@ -53,7 +53,8 @@ end
 -- Front-end renderer configuration
 config.front_end = "WebGpu" -- Use WebGpu for rendering
 config.webgpu_power_preference = "HighPerformance"
-config.freetype_load_target = "Normal"
+config.freetype_load_target = "Light"
+config.freetype_load_flags = "NO_HINTING"
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
 --config.color_scheme_dirs = { "~/git/tokyonight.nvim/extras/wezterm" }
@@ -80,7 +81,7 @@ config.harfbuzz_features = {
     -- PragmataPro settings
     -- https://github.com/fabrizioschiavi/pragmatapro/blob/master/useful_files/Handbook.png
     "calt=1", --Ligatures
-    "cv03=1", -- Alt &
+    "cv03=0", -- Alt &
     "ss13=1", -- Better line drawing
 }
 
@@ -144,7 +145,7 @@ config.colors = {
 -- }
 
 -- General configuration settings
-config.font_size = 17.0
+config.font_size = 16.0
 config.initial_rows = 42
 config.initial_cols = 100
 config.scrollback_lines = 5000
