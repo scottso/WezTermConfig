@@ -25,33 +25,53 @@ local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
 -- Main font configuration with fallback
+-- config.font = wezterm.font_with_fallback({
+--     {
+--         family = "Fira Code",
+--         weight = "Regular",
+--         harfbuzz_features = {
+--             "zero=1", -- 0
+--             "cv14=1", -- 3
+--             "ss05=1", -- @
+--             "ss04=1", -- $
+--             "cv18=0", -- %
+--             "ss03=1", -- &
+--             "cv16=0", -- *** * (more arms on the asterisk)
+--             "cv31=1", -- () (   )
+--             "cv29=0", -- {} {   }
+--             "ss08=0", -- = == === != !==
+--             "ss09=1", -- >>= <<= ||= |=
+--             "cv25=1", -- .-
+--             "cv26=1", -- :-
+--             "cv32=1", -- .=
+--             "cv28=1", -- {. .}
+--             "ss07=1", -- =~ !~
+--         },
+--     },
+--     { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--     { family = "Noto Color Emoji",       weight = "Bold" },
+-- })
 config.font = wezterm.font_with_fallback({
     {
-        family = "Fira Code",
+        family = "MonoLisa Variable",
         weight = "Regular",
         harfbuzz_features = {
-            "zero=1", -- 0
-            "cv14=1", -- 3
-            "ss05=1", -- @
-            "ss04=1", -- $
-            "cv18=0", -- %
-            "ss03=1", -- &
-            "cv16=0", -- *** * (more arms on the asterisk)
-            "cv31=1", -- () (   )
-            "cv29=0", -- {} {   }
-            "ss08=0", -- = == === != !==
-            "ss09=1", -- >>= <<= ||= |=
-            "cv25=1", -- .-
-            "cv26=1", -- :-
-            "cv32=1", -- .=
-            "cv28=1", -- {. .}
-            "ss07=1", -- =~ !~
+            "calt=1",
+            "liga=1",
+            "zero=0", -- 0
+            "ss01=0", -- * (raised asterisk)
+            "ss02=0", -- Script
+            "ss07=1", -- {} {  }
+            "ss08=1", -- () (  )
+            "ss09=1", -- <= >= (double width ligatures)
+            "ss11=1", -- 0xF (formatting for hex codes)
         },
     },
-    { family = "Symbols Nerd Font Mono", weight = "Regular" },
-    { family = "Noto Color Emoji", weight = "Bold" },
+    { family = "Symbols Nerd Font Mono", weight = "Medium" },
+    { family = "Noto Color Emoji",       weight = "Bold" },
 })
-config.font_size = 14.0
+
+config.font_size = 13.0
 config.bold_brightens_ansi_colors = true
 
 -- General configuration settings
@@ -67,7 +87,7 @@ config.window_background_opacity = 1 -- Full opacity
 config.window_decorations = "TITLE|RESIZE"
 config.use_fancy_tab_bar = false
 config.term = "wezterm"
-config.underline_thickness = 2
+-- config.underline_thickness = 2
 config.default_cursor_style = "BlinkingBar"
 config.force_reverse_video_cursor = false
 config.cursor_blink_ease_in = "Constant"
