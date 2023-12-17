@@ -8,7 +8,7 @@ require("links").setup(config)
 local function light_or_dark(appearance)
     if appearance:find("Dark") then
         -- Dark theme
-        return "Catppuccin Macchiato"
+        return "Catppuccin Mocha"
     else
         -- Light theme
         return "Catppuccin Latte"
