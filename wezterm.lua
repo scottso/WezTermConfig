@@ -23,7 +23,7 @@ config.color_scheme = light_or_dark(appearance)
 config.font = wezterm.font_with_fallback({
     {
         family = "MonoLisa Variable",
-        weight = "Regular",
+        weight = 450, -- 450 is between Regular and Medium
         harfbuzz_features = {
             "calt=1",
             "liga=1",
