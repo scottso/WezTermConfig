@@ -20,28 +20,41 @@ config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
+-- config.font = wezterm.font_with_fallback({
+--     {
+--         family = "MonoLisa Variable",
+--         weight = 450, -- 450 is between Regular and Medium
+--         harfbuzz_features = {
+--             "calt=1",
+--             "liga=1",
+--             "zero=0", -- 0
+--             "ss01=0", -- * (raised asterisk)
+--             "ss02=0", -- Script
+--             "ss07=1", -- {} {  }
+--             "ss08=1", -- () (  )
+--             "ss09=1", -- <= >= (double width ligatures)
+--             "ss11=1", -- 0xF (formatting for hex codes)
+--         },
+--     },
+--     { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--     { family = "Noto Color Emoji",       weight = "Regular" },
+-- })
+
 config.font = wezterm.font_with_fallback({
     {
-        family = "MonoLisa Variable",
-        weight = 450, -- 450 is between Regular and Medium
+        family = "PragmataPro Mono Liga",
+        weight = "Regular", -- 450 is between Regular and Medium
         harfbuzz_features = {
-            "calt=1",
-            "liga=1",
-            "zero=0", -- 0
-            "ss01=0", -- * (raised asterisk)
-            "ss02=0", -- Script
-            "ss07=1", -- {} {  }
-            "ss08=1", -- () (  )
-            "ss09=1", -- <= >= (double width ligatures)
-            "ss11=1", -- 0xF (formatting for hex codes)
+            "calt=1",       -- ligatures in -> [info] [todo]
+            "ss13=1",       -- better line drawing
         },
     },
     { family = "Symbols Nerd Font Mono", weight = "Regular" },
     { family = "Noto Color Emoji",       weight = "Regular" },
 })
 
-config.font_size = 13.0
-config.bold_brightens_ansi_colors = true
+config.font_size = 15.0
+config.bold_brightens_ansi_colors = false
 
 -- General configuration settings
 config.initial_rows = 45
