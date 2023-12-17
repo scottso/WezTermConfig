@@ -24,33 +24,6 @@ config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
--- Main font configuration with fallback
--- config.font = wezterm.font_with_fallback({
---     {
---         family = "Fira Code",
---         weight = "Regular",
---         harfbuzz_features = {
---             "zero=1", -- 0
---             "cv14=1", -- 3
---             "ss05=1", -- @
---             "ss04=1", -- $
---             "cv18=0", -- %
---             "ss03=1", -- &
---             "cv16=0", -- *** * (more arms on the asterisk)
---             "cv31=1", -- () (   )
---             "cv29=0", -- {} {   }
---             "ss08=0", -- = == === != !==
---             "ss09=1", -- >>= <<= ||= |=
---             "cv25=1", -- .-
---             "cv26=1", -- :-
---             "cv32=1", -- .=
---             "cv28=1", -- {. .}
---             "ss07=1", -- =~ !~
---         },
---     },
---     { family = "Symbols Nerd Font Mono", weight = "Regular" },
---     { family = "Noto Color Emoji",       weight = "Bold" },
--- })
 config.font = wezterm.font_with_fallback({
     {
         family = "MonoLisa Variable",
@@ -67,8 +40,8 @@ config.font = wezterm.font_with_fallback({
             "ss11=1", -- 0xF (formatting for hex codes)
         },
     },
-    { family = "Symbols Nerd Font Mono", weight = "Medium" },
-    { family = "Noto Color Emoji",       weight = "Bold" },
+    { family = "Symbols Nerd Font Mono", weight = "Regular" },
+    { family = "Noto Color Emoji",       weight = "Regular" },
 })
 
 config.font_size = 13.0
