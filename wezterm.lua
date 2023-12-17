@@ -115,14 +115,9 @@ config.font_size = 13.0
 config.bold_brightens_ansi_colors = false
 
 -- Cursor config
-config.visual_bell = {
-    fade_in_duration_ms = 75,
-    fade_out_duration_ms = 75,
-    target = "CursorColor",
-}
-config.default_cursor_style = "SteadyBlock"
+config.default_cursor_style = "SteadyBar"
 config.force_reverse_video_cursor = false
--- config.cursor_thickness = 3
+config.cursor_thickness = 3
 
 -- General configuration settings
 config.initial_rows = 45
