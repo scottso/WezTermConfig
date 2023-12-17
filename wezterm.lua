@@ -20,41 +20,109 @@ config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
--- config.font = wezterm.font_with_fallback({
---     {
---         family = "MonoLisa Variable",
---         weight = 450, -- 450 is between Regular and Medium
---         harfbuzz_features = {
---             "calt=1",
---             "liga=1",
---             "zero=0", -- 0
---             "ss01=0", -- * (raised asterisk)
---             "ss02=0", -- Script
---             "ss07=1", -- {} {  }
---             "ss08=1", -- () (  )
---             "ss09=1", -- <= >= (double width ligatures)
---             "ss11=1", -- 0xF (formatting for hex codes)
---         },
---     },
---     { family = "Symbols Nerd Font Mono", weight = "Regular" },
---     { family = "Noto Color Emoji",       weight = "Regular" },
--- })
+-- [[[ MonoLisa ]]] --
+--config.font = wezterm.font_with_fallback({
+--    {
+--        family = "MonoLisa Variable",
+--        weight = 450, -- 450 is between Regular and Medium
+--        harfbuzz_features = {
+--            "calt=1",
+--            "liga=1",
+--            "zero=0", -- 0
+--            "ss01=0", -- * (raised asterisk)
+--            "ss02=0", -- Script
+--            "ss07=1", -- {} {  }
+--            "ss08=1", -- () (  )
+--            "ss09=1", -- <= >= (double width ligatures)
+--            "ss11=1", -- 0xF (formatting for hex codes)
+--        },
+--    },
+--    { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--    { family = "Noto Color Emoji",       weight = "Regular" },
+--})
 
+-- [[[ MonaSpace ]]] --
+-- https://github.com/githubnext/monaspace
+-- Variants are: Neon, Argon, Xenon, Radon, Krypton
 config.font = wezterm.font_with_fallback({
     {
-        family = "PragmataPro Mono Liga",
-        weight = "Regular", -- 450 is between Regular and Medium
+        family = "Monaspace Xenon",
+        weight = 450, -- 450 is between Regular and Medium
         harfbuzz_features = {
-            "calt=1",       -- ligatures in -> [info] [todo]
-            "ss13=1",       -- better line drawing
+            "ss01=1", -- ===
+            "ss02=1", -- >= <=
+            "ss03=1", -- -> --> <~>
+            "ss04=1", -- </ /> /\ </>
+            "ss05=1", -- |> <|
+            "ss06=1", -- ## ###
+            "ss07=1", -- ***
+            "ss08=1", -- .=
         },
     },
     { family = "Symbols Nerd Font Mono", weight = "Regular" },
     { family = "Noto Color Emoji",       weight = "Regular" },
 })
 
-config.font_size = 15.0
+config.font_rules = {
+    {
+        intensity = "Bold",
+        italic = true,
+        font = wezterm.font({
+            family = "Monaspace Radon",
+            weight = "Bold",
+            style = "Italic",
+        }),
+    },
+    {
+        italic = true,
+        intensity = "Half",
+        font = wezterm.font({
+            family = "Monaspace Radon",
+            weight = "DemiBold",
+            style = "Italic",
+        }),
+    },
+    {
+        italic = true,
+        intensity = "Normal",
+        font = wezterm.font({
+            family = "Monaspace Radon",
+            style = "Italic",
+        }),
+    },
+}
+
+-- [[[ Fira Code]]] --
+-- https://github.com/tonsky/FiraCode
+-- config.font = wezterm.font_with_fallback({
+--     {
+--         family = "Fira Code",
+--         weight = 450, -- 450 is between Regular and Medium
+--         harfbuzz_features = {
+--             "liga=1", -- === ->
+--             "zero=1", -- 0
+--             "cv14=1", -- 3
+--             "ss05=1", -- @
+--             "ss04=1", -- $
+--             "ss03=1", -- &
+--         },
+--     },
+--     { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--     { family = "Noto Color Emoji",       weight = "Regular" },
+-- })
+
+config.font_size = 13.0
 config.bold_brightens_ansi_colors = false
+
+-- Cursor config
+config.visual_bell = {
+    fade_in_duration_ms = 75,
+    fade_out_duration_ms = 75,
+    target = "CursorColor",
+}
+config.default_cursor_style = "SteadyBlock"
+config.force_reverse_video_cursor = false
+-- config.cursor_thickness = 3
 
 -- General configuration settings
 config.initial_rows = 45
@@ -70,11 +138,6 @@ config.window_decorations = "TITLE|RESIZE"
 config.use_fancy_tab_bar = false
 config.term = "wezterm"
 -- config.underline_thickness = 2
-config.default_cursor_style = "BlinkingBar"
-config.force_reverse_video_cursor = false
-config.cursor_blink_ease_in = "Constant"
-config.cursor_blink_ease_out = "Constant"
-config.cursor_thickness = 3
 config.window_padding = { left = 5, right = 5, top = 5, bottom = 5 }
 config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
