@@ -15,10 +15,6 @@ local function light_or_dark(appearance)
     end
 end
 
--- Front-end renderer configuration
-config.front_end = "WebGpu" -- Use WebGpu for rendering
-config.webgpu_power_preference = "HighPerformance"
-
 -- Detect current appearance and apply the corresponding color scheme and tab style
 config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
@@ -67,6 +63,8 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 config.cursor_thickness = 3
 config.window_padding = { left = 5, right = 5, top = 5, bottom = 5 }
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
 
 -- Moving tabs
 config.keys = {}
