@@ -25,7 +25,7 @@ config.color_scheme = light_or_dark(appearance)
 config.font = wezterm.font_with_fallback({
     {
         family = "Berkeley Mono Variable",
-        weight = "Medium",
+        weight = 450,
         harfbuzz_features = {
             "ss02", -- 0
             "ss06", -- 1234567890 777
