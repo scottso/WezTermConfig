@@ -44,56 +44,102 @@ config.color_scheme = light_or_dark(appearance)
 -- [[ MonaSpace ]] --
 -- https://github.com/githubnext/monaspace
 -- Variants are: Neon, Argon, Xenon, Radon, Krypton
--- config.font = wezterm.font_with_fallback({
---     {
---         family = "Monaspace Neon",
---         weight = "Book", -- 450 is between Regular and Medium
---         harfbuzz_features = {
---             "calt",
---             "liga",
---             "dlig",
---             "ss01", -- ===
---             "ss02", -- >= <=
---             "ss03", -- -> --> <~>
---             "ss04", -- </ /> /\ </>
---             "ss05", -- |> <|
---             "ss06", -- ## ###
---             "ss07", -- ***
---             "ss08", -- .=
---         },
---     },
---     { family = "Symbols Nerd Font Mono", weight = "Regular" },
---     { family = "Noto Color Emoji",       weight = "Regular" },
--- })
+config.font = wezterm.font_with_fallback({
+    {
+        family = "Monaspace Argon",
+        weight = "ExtraLight",
+        stretch = "Normal",
+        style = "Normal",
+        harfbuzz_features = {
+            "calt",
+            "liga",
+            "dlig",
+            "ss01", -- ===
+            "ss02", -- >= <=
+            "ss03", -- -> --> <~>
+            "ss04", -- </ /> /\ </>
+            "ss05", -- |> <|
+            "ss06", -- ## ###
+            "ss07", -- ***
+            "ss08", -- .=
+        },
+    },
+    { family = "Symbols Nerd Font Mono", weight = "Regular" },
+    { family = "Noto Color Emoji",       weight = "Regular" },
+})
 
--- config.font_rules = {
---     {
---         intensity = "Bold",
---         italic = true,
---         font = wezterm.font({
---             family = "Monaspace Radon",
---             weight = "Bold",
---             style = "Italic",
---         }),
---     },
---     {
---         italic = true,
---         intensity = "Half",
---         font = wezterm.font({
---             family = "Monaspace Radon",
---             weight = "DemiBold",
---             style = "Italic",
---         }),
---     },
---     {
---         italic = true,
---         intensity = "Normal",
---         font = wezterm.font({
---             family = "Monaspace Radon",
---             style = "Italic",
---         }),
---     },
--- }
+config.font_rules = {
+
+    { -- Italic
+        intensity = "Normal",
+        italic = true,
+        font = wezterm.font({
+            family = "Monaspace Radon",
+            weight = "ExtraLight",
+            stretch = "Normal",
+            style = "Normal",
+            harfbuzz_features = {
+                "calt",
+                "liga",
+                "dlig",
+                "ss01",
+                "ss02",
+                "ss03",
+                "ss04",
+                "ss05",
+                "ss06",
+                "ss07",
+                "ss08",
+            },
+        }),
+    },
+    { -- Bold
+        intensity = "Bold",
+        italic = false,
+        font = wezterm.font({
+            family = "Monaspace Krypton",
+            weight = "Medium",
+            stretch = "Normal",
+            style = "Normal",
+            harfbuzz_features = {
+                "calt",
+                "liga",
+                "dlig",
+                "ss01",
+                "ss02",
+                "ss03",
+                "ss04",
+                "ss05",
+                "ss06",
+                "ss07",
+                "ss08",
+            },
+        }),
+    },
+    { -- Bold Italic
+        intensity = "Bold",
+        italic = true,
+        font = wezterm.font({
+            family = "Monaspace Krypton",
+            weight = "Medium",
+            stretch = "Normal",
+            style = "Normal",
+            harfbuzz_features = {
+                "calt",
+                "liga",
+                "dlig",
+                "ss01",
+                "ss02",
+                "ss03",
+                "ss04",
+                "ss05",
+                "ss06",
+                "ss07",
+                "ss08",
+            },
+        }),
+    },
+}
 
 -- [[ Fira Code]] --
 -- https://github.com/tonsky/FiraCode
@@ -116,20 +162,20 @@ config.color_scheme = light_or_dark(appearance)
 
 -- [[ PragmataPro ]] --
 -- https://fsd.it/pragmatapro/Handbook.png
-config.font = wezterm.font_with_fallback({
-    {
-        family = "PragmataPro Liga",
-        weight = 400, -- 450 is between Regular and Medium
-        harfbuzz_features = {
-            "calt",   -- Ligatures !=
-            "ss13",   -- Better git tree lines
-        },
-    },
-    { family = "Symbols Nerd Font Mono", weight = "Regular" },
-    { family = "Noto Color Emoji",       weight = "Regular" },
-})
+-- config.font = wezterm.font_with_fallback({
+--     {
+--         family = "PragmataPro Liga",
+--         weight = 400, -- 450 is between Regular and Medium
+--         harfbuzz_features = {
+--             "calt",   -- Ligatures !=
+--             "ss13",   -- Better git tree lines
+--         },
+--     },
+--     { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--     { family = "Noto Color Emoji",       weight = "Regular" },
+-- })
 
-config.font_size = 15.0
+config.font_size = 13.0
 config.bold_brightens_ansi_colors = false
 
 -- Cursor config
