@@ -20,51 +20,51 @@ config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
--- [[[ MonoLisa ]]] --
---config.font = wezterm.font_with_fallback({
---    {
---        family = "MonoLisa Variable",
---        weight = 450, -- 450 is between Regular and Medium
---        harfbuzz_features = {
---            "calt=1",
---            "liga=1",
---            "zero=0", -- 0
---            "ss01=0", -- * (raised asterisk)
---            "ss02=0", -- Script
---            "ss07=1", -- {} {  }
---            "ss08=1", -- () (  )
---            "ss09=1", -- <= >= (double width ligatures)
---            "ss11=1", -- 0xF (formatting for hex codes)
---        },
---    },
---    { family = "Symbols Nerd Font Mono", weight = "Regular" },
---    { family = "Noto Color Emoji",       weight = "Regular" },
---})
+-- [[ MonoLisa ]] --
+-- config.font = wezterm.font_with_fallback({
+--     {
+--         family = "MonoLisa Variable",
+--         weight = 450, -- 450 is between Regular and Medium
+--         harfbuzz_features = {
+--             "calt",
+--             "liga",
+--             "zero", -- 0
+--             "ss01", -- * (raised asterisk)
+--             "ss02", -- Script
+--             "ss07", -- {} {  }
+--             "ss08", -- () (  )
+--             "ss09", -- <= >= (double width ligatures)
+--             "ss11", -- 0xF (formatting for hex codes)
+--         },
+--     },
+--     { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--     { family = "Noto Color Emoji",       weight = "Regular" },
+-- })
 
--- [[[ MonaSpace ]]] --
+-- [[ MonaSpace ]] --
 -- https://github.com/githubnext/monaspace
 -- Variants are: Neon, Argon, Xenon, Radon, Krypton
-config.font = wezterm.font_with_fallback({
-    {
-        family = "Monaspace Neon",
-        weight = 450, -- 450 is between Regular and Medium
-        harfbuzz_features = {
-            "calt=1",
-            "liga=1",
-            "dlig=1",
-            "ss01=1", -- ===
-            "ss02=1", -- >= <=
-            "ss03=1", -- -> --> <~>
-            "ss04=1", -- </ /> /\ </>
-            "ss05=1", -- |> <|
-            "ss06=1", -- ## ###
-            "ss07=1", -- ***
-            "ss08=1", -- .=
-        },
-    },
-    { family = "Symbols Nerd Font Mono", weight = "Regular" },
-    { family = "Noto Color Emoji",       weight = "Regular" },
-})
+-- config.font = wezterm.font_with_fallback({
+--     {
+--         family = "Monaspace Neon",
+--         weight = "Book", -- 450 is between Regular and Medium
+--         harfbuzz_features = {
+--             "calt",
+--             "liga",
+--             "dlig",
+--             "ss01", -- ===
+--             "ss02", -- >= <=
+--             "ss03", -- -> --> <~>
+--             "ss04", -- </ /> /\ </>
+--             "ss05", -- |> <|
+--             "ss06", -- ## ###
+--             "ss07", -- ***
+--             "ss08", -- .=
+--         },
+--     },
+--     { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--     { family = "Noto Color Emoji",       weight = "Regular" },
+-- })
 
 -- config.font_rules = {
 --     {
@@ -95,26 +95,41 @@ config.font = wezterm.font_with_fallback({
 --     },
 -- }
 
--- [[[ Fira Code]]] --
+-- [[ Fira Code]] --
 -- https://github.com/tonsky/FiraCode
 -- config.font = wezterm.font_with_fallback({
 --     {
 --         family = "Fira Code",
 --         weight = 450, -- 450 is between Regular and Medium
 --         harfbuzz_features = {
---             "liga=1", -- === ->
---             "zero=1", -- 0
---             "cv14=1", -- 3
---             "ss05=1", -- @
---             "ss04=1", -- $
---             "ss03=1", -- &
+--             "liga", -- === ->
+--             "zero", -- 0
+--             "cv14", -- 3
+--             "ss05", -- @
+--             "ss04", -- $
+--             "ss03", -- &
 --         },
 --     },
 --     { family = "Symbols Nerd Font Mono", weight = "Regular" },
 --     { family = "Noto Color Emoji",       weight = "Regular" },
 -- })
 
-config.font_size = 13.0
+-- [[ PragmataPro ]] --
+-- https://fsd.it/pragmatapro/Handbook.png
+config.font = wezterm.font_with_fallback({
+    {
+        family = "PragmataPro Liga",
+        weight = 400, -- 450 is between Regular and Medium
+        harfbuzz_features = {
+            "calt",   -- Ligatures !=
+            "ss13",   -- Better git tree lines
+        },
+    },
+    { family = "Symbols Nerd Font Mono", weight = "Regular" },
+    { family = "Noto Color Emoji",       weight = "Regular" },
+})
+
+config.font_size = 15.0
 config.bold_brightens_ansi_colors = false
 
 -- Cursor config
