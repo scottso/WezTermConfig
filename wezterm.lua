@@ -27,8 +27,12 @@ config.font = wezterm.font_with_fallback({
         family = "Berkeley Mono Variable",
         weight = 450,
         harfbuzz_features = {
-            "ss02", -- 0
-            "ss06", -- 1234567890 777
+            "ss01=0", -- Plain zero
+            "ss02=0", -- Dotted zero
+            "ss03=1", -- Slashed zero
+            "ss04=0", -- Striped zero
+            "ss05=1", -- Regular 7
+            "ss06=0", -- Fancy 7
         },
     },
     { family = "Symbols Nerd Font Mono", weight = "Regular" },
