@@ -46,9 +46,12 @@ config.color_scheme = light_or_dark(appearance)
 -- Variants are: Neon, Argon, Xenon, Radon, Krypton
 config.font = wezterm.font_with_fallback({
     {
-        family = "Monaspace Xenon",
+        family = "Monaspace Neon",
         weight = 450, -- 450 is between Regular and Medium
         harfbuzz_features = {
+            "calt=1",
+            "liga=1",
+            "dlig=1",
             "ss01=1", -- ===
             "ss02=1", -- >= <=
             "ss03=1", -- -> --> <~>
@@ -63,34 +66,34 @@ config.font = wezterm.font_with_fallback({
     { family = "Noto Color Emoji",       weight = "Regular" },
 })
 
-config.font_rules = {
-    {
-        intensity = "Bold",
-        italic = true,
-        font = wezterm.font({
-            family = "Monaspace Radon",
-            weight = "Bold",
-            style = "Italic",
-        }),
-    },
-    {
-        italic = true,
-        intensity = "Half",
-        font = wezterm.font({
-            family = "Monaspace Radon",
-            weight = "DemiBold",
-            style = "Italic",
-        }),
-    },
-    {
-        italic = true,
-        intensity = "Normal",
-        font = wezterm.font({
-            family = "Monaspace Radon",
-            style = "Italic",
-        }),
-    },
-}
+-- config.font_rules = {
+--     {
+--         intensity = "Bold",
+--         italic = true,
+--         font = wezterm.font({
+--             family = "Monaspace Radon",
+--             weight = "Bold",
+--             style = "Italic",
+--         }),
+--     },
+--     {
+--         italic = true,
+--         intensity = "Half",
+--         font = wezterm.font({
+--             family = "Monaspace Radon",
+--             weight = "DemiBold",
+--             style = "Italic",
+--         }),
+--     },
+--     {
+--         italic = true,
+--         intensity = "Normal",
+--         font = wezterm.font({
+--             family = "Monaspace Radon",
+--             style = "Italic",
+--         }),
+--     },
+-- }
 
 -- [[[ Fira Code]]] --
 -- https://github.com/tonsky/FiraCode
