@@ -20,21 +20,36 @@ config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
+-- [[ Berkeley Mono ]] --
+-- https://berkeleygraphics.com/typefaces/berkeley-mono/
+config.font = wezterm.font_with_fallback({
+    {
+        family = "Berkeley Mono Variable",
+        weight = "Medium",
+        harfbuzz_features = {
+            "ss02", -- 0
+            "ss06", -- 1234567890 777
+        },
+    },
+    { family = "Symbols Nerd Font Mono", weight = "Regular" },
+    { family = "Noto Color Emoji",       weight = "Regular" },
+})
+
 -- [[ MonoLisa ]] --
+-- https://www.monolisa.dev/specimen
 -- config.font = wezterm.font_with_fallback({
 --     {
 --         family = "MonoLisa Variable",
---         weight = 450, -- 450 is between Regular and Medium
+--         weight = 350, -- 450 is between Regular and Medium
 --         harfbuzz_features = {
 --             "calt",
 --             "liga",
---             "zero", -- 0
---             "ss01", -- * (raised asterisk)
---             "ss02", -- Script
---             "ss07", -- {} {  }
---             "ss08", -- () (  )
---             "ss09", -- <= >= (double width ligatures)
---             "ss11", -- 0xF (formatting for hex codes)
+--             "ss02=0", -- Script
+--             "ss07",   -- {} {  }
+--             "ss08",   -- () (  )
+--             "ss09",   -- <= >= (double width ligatures)
+--             "ss11",   -- 0xF (formatting for hex codes)
+--             "ss17",   -- .=
 --         },
 --     },
 --     { family = "Symbols Nerd Font Mono", weight = "Regular" },
@@ -44,102 +59,102 @@ config.color_scheme = light_or_dark(appearance)
 -- [[ MonaSpace ]] --
 -- https://github.com/githubnext/monaspace
 -- Variants are: Neon, Argon, Xenon, Radon, Krypton
-config.font = wezterm.font_with_fallback({
-    {
-        family = "Monaspace Argon",
-        weight = "ExtraLight",
-        stretch = "Normal",
-        style = "Normal",
-        harfbuzz_features = {
-            "calt",
-            "liga",
-            "dlig",
-            "ss01", -- ===
-            "ss02", -- >= <=
-            "ss03", -- -> --> <~>
-            "ss04", -- </ /> /\ </>
-            "ss05", -- |> <|
-            "ss06", -- ## ###
-            "ss07", -- ***
-            "ss08", -- .=
-        },
-    },
-    { family = "Symbols Nerd Font Mono", weight = "Regular" },
-    { family = "Noto Color Emoji",       weight = "Regular" },
-})
-
-config.font_rules = {
-
-    { -- Italic
-        intensity = "Normal",
-        italic = true,
-        font = wezterm.font({
-            family = "Monaspace Radon",
-            weight = "ExtraLight",
-            stretch = "Normal",
-            style = "Normal",
-            harfbuzz_features = {
-                "calt",
-                "liga",
-                "dlig",
-                "ss01",
-                "ss02",
-                "ss03",
-                "ss04",
-                "ss05",
-                "ss06",
-                "ss07",
-                "ss08",
-            },
-        }),
-    },
-    { -- Bold
-        intensity = "Bold",
-        italic = false,
-        font = wezterm.font({
-            family = "Monaspace Krypton",
-            weight = "Medium",
-            stretch = "Normal",
-            style = "Normal",
-            harfbuzz_features = {
-                "calt",
-                "liga",
-                "dlig",
-                "ss01",
-                "ss02",
-                "ss03",
-                "ss04",
-                "ss05",
-                "ss06",
-                "ss07",
-                "ss08",
-            },
-        }),
-    },
-    { -- Bold Italic
-        intensity = "Bold",
-        italic = true,
-        font = wezterm.font({
-            family = "Monaspace Krypton",
-            weight = "Medium",
-            stretch = "Normal",
-            style = "Normal",
-            harfbuzz_features = {
-                "calt",
-                "liga",
-                "dlig",
-                "ss01",
-                "ss02",
-                "ss03",
-                "ss04",
-                "ss05",
-                "ss06",
-                "ss07",
-                "ss08",
-            },
-        }),
-    },
-}
+-- config.font = wezterm.font_with_fallback({
+--     {
+--         family = "Monaspace Neon",
+--         weight = 300,
+--         stretch = "Normal",
+--         style = "Normal",
+--         harfbuzz_features = {
+--             "calt",
+--             "liga",
+--             "dlig",
+--             "ss01", -- ===
+--             "ss02", -- >= <=
+--             "ss03", -- -> --> <~>
+--             "ss04", -- </ /> /\ </>
+--             "ss05", -- |> <|
+--             "ss06", -- ## ###
+--             "ss07", -- ***
+--             "ss08", -- .=
+--         },
+--     },
+--     { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--     { family = "Noto Color Emoji",       weight = "Regular" },
+-- })
+--
+-- config.font_rules = {
+--
+--     { -- Italic
+--         intensity = "Normal",
+--         italic = true,
+--         font = wezterm.font({
+--             family = "Monaspace Radon",
+--             weight = 300,
+--             stretch = "Normal",
+--             style = "Normal",
+--             harfbuzz_features = {
+--                 "calt",
+--                 "liga",
+--                 "dlig",
+--                 "ss01",
+--                 "ss02",
+--                 "ss03",
+--                 "ss04",
+--                 "ss05",
+--                 "ss06",
+--                 "ss07",
+--                 "ss08",
+--             },
+--         }),
+--     },
+--     { -- Bold
+--         intensity = "Bold",
+--         italic = false,
+--         font = wezterm.font({
+--             family = "Monaspace Neon",
+--             weight = 500,
+--             stretch = "Normal",
+--             style = "Normal",
+--             harfbuzz_features = {
+--                 "calt",
+--                 "liga",
+--                 "dlig",
+--                 "ss01",
+--                 "ss02",
+--                 "ss03",
+--                 "ss04",
+--                 "ss05",
+--                 "ss06",
+--                 "ss07",
+--                 "ss08",
+--             },
+--         }),
+--     },
+--     { -- Bold Italic
+--         intensity = "Bold",
+--         italic = true,
+--         font = wezterm.font({
+--             family = "Monaspace Neon",
+--             weight = 500,
+--             stretch = "Normal",
+--             style = "Normal",
+--             harfbuzz_features = {
+--                 "calt",
+--                 "liga",
+--                 "dlig",
+--                 "ss01",
+--                 "ss02",
+--                 "ss03",
+--                 "ss04",
+--                 "ss05",
+--                 "ss06",
+--                 "ss07",
+--                 "ss08",
+--             },
+--         }),
+--     },
+-- }
 
 -- [[ Fira Code]] --
 -- https://github.com/tonsky/FiraCode
@@ -161,7 +176,7 @@ config.font_rules = {
 -- })
 
 -- [[ PragmataPro ]] --
--- https://fsd.it/pragmatapro/Handbook.png
+--  https://fsd.it/pragmatapro/Handbook.png
 -- config.font = wezterm.font_with_fallback({
 --     {
 --         family = "PragmataPro Liga",
@@ -171,11 +186,11 @@ config.font_rules = {
 --             "ss13",   -- Better git tree lines
 --         },
 --     },
---     { family = "Symbols Nerd Font Mono", weight = "Regular" },
+--     { family = "Symbols Nerd Font", weight = "Regular" },
 --     { family = "Noto Color Emoji",       weight = "Regular" },
 -- })
 
-config.font_size = 13.0
+config.font_size = 13
 config.bold_brightens_ansi_colors = false
 
 -- Cursor config
