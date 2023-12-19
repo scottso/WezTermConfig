@@ -194,7 +194,7 @@ config.font = wezterm.font_with_fallback({
 --     { family = "Noto Color Emoji",       weight = "Regular" },
 -- })
 
-config.font_size = 13
+config.font_size = 14
 config.bold_brightens_ansi_colors = false
 
 -- Cursor config
@@ -215,7 +215,7 @@ config.window_background_opacity = 1 -- Full opacity
 config.window_decorations = "TITLE|RESIZE"
 config.use_fancy_tab_bar = false
 config.term = "wezterm"
--- config.underline_thickness = 2
+config.underline_thickness = 1
 config.window_padding = { left = 5, right = 5, top = 5, bottom = 5 }
 config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
