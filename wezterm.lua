@@ -40,7 +40,7 @@ config.font = wezterm.font_with_fallback({
             "cv98=12", -- * ** ***
         },
     },
-    { family = "Symbols Nerd Font Mono", weight = "Regular" },
+    { family = "Symbols Nerd Font Mono", scale = 0.8,       weight = "Regular" },
     { family = "Noto Color Emoji",       weight = "Regular" },
 })
 
