@@ -34,7 +34,7 @@ config.font = wezterm.font_with_fallback({
             "VLAC=1",  -- == ===  (small gap between double equal-sign)
             "VLAA=1",  -- <= >=
             "VLAE=2",  -- ==> =>
-            "cv38=20", -- m
+            "cv38=8", -- m
             "cv85=6",  -- 0 1234567890
             "cv96=2",  -- .,:;?!
             "cv98=12", -- * ** ***
