@@ -21,7 +21,7 @@ end
 -- https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md
 config.font = wezterm.font_with_fallback({
     {
-        family = "Iosevka",
+        family = "Iosevka Term",
         weight = 400,
         harfbuzz_features = {
             "calt=on", -- Ligatures
