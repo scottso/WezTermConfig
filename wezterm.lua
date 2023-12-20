@@ -21,8 +21,8 @@ end
 -- https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md
 config.font = wezterm.font_with_fallback({
     {
-        family = "Iosevka Term",
-        weight = 400,
+        family = "Iosevka Custom",
+        weight = "Book",
         harfbuzz_features = {
             "calt=on", -- Ligatures
             "dlig=on", -- Discretionary ligatures -<< <==> >>==
@@ -40,7 +40,7 @@ config.font = wezterm.font_with_fallback({
             "cv98=12", -- * ** ***
         },
     },
-    { family = "Symbols Nerd Font Mono", scale = 0.8,       weight = "Regular" },
+    { family = "Symbols Nerd Font Mono", scale = 0.9,       weight = "Regular" },
     { family = "Apple Color Emoji",      weight = "Regular" },
 })
 
