@@ -28,7 +28,7 @@ config.font = wezterm.font_with_fallback({
             "dlig=on", -- Discretionary ligatures -<< <==> >>==
             "VSAD=2",  -- () (  )
             "VSAE=3",  -- {} {  }
-            "VSAI=6",  -- @
+            "VSAI=2",  -- @
             "VSAJ=3",  -- $ $SHELL
             "VLAB=5",  -- !=
             "VLAC=1",  -- == ===  (small gap between double equal-sign)
