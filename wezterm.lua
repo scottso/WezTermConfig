@@ -41,7 +41,7 @@ config.font = wezterm.font_with_fallback({
         },
     },
     { family = "Symbols Nerd Font Mono", scale = 0.8,       weight = "Regular" },
-    { family = "Noto Color Emoji",       weight = "Regular" },
+    { family = "Apple Color Emoji",      weight = "Regular" },
 })
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
