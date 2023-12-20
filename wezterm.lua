@@ -23,6 +23,7 @@ config.font = wezterm.font_with_fallback({
     {
         family = "Iosevka Custom",
         weight = "Book",
+        stretch = "Normal",
         harfbuzz_features = {
             "calt=on", -- Ligatures
             "dlig=on", -- Discretionary ligatures -<< <==> >>==
@@ -34,7 +35,7 @@ config.font = wezterm.font_with_fallback({
             "VLAC=1",  -- == ===  (small gap between double equal-sign)
             "VLAA=1",  -- <= >=
             "VLAE=2",  -- ==> =>
-            "cv38=8", -- m
+            "cv38=8",  -- m
             "cv85=6",  -- 0 1234567890
             "cv96=2",  -- .,:;?!
             "cv98=12", -- * ** ***
@@ -49,7 +50,7 @@ config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
-config.font_size = 15
+config.font_size = 16
 config.bold_brightens_ansi_colors = true
 
 -- Cursor config
