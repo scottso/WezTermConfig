@@ -23,7 +23,7 @@ config.font = wezterm.font_with_fallback({
     {
         family = "Iosevka Custom",
         weight = "Book",
-        stretch = "Normal",
+        stretch = "SemiExpanded",
         harfbuzz_features = {
             "calt=on", -- Ligatures
             "dlig=on", -- Discretionary ligatures -<< <==> >>==
