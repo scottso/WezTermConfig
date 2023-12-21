@@ -59,7 +59,7 @@ config.force_reverse_video_cursor = false
 config.cursor_thickness = 3
 
 -- General configuration settings
-config.initial_rows = 45
+config.initial_rows = 30
 config.initial_cols = 100
 config.scrollback_lines = 4200
 config.adjust_window_size_when_changing_font_size = false
