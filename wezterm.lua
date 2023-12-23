@@ -50,7 +50,7 @@ config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
-config.font_size = 16
+config.font_size = 15
 config.bold_brightens_ansi_colors = true
 
 -- Cursor config
