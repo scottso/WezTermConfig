@@ -27,22 +27,23 @@ config.font = wezterm.font_with_fallback({
         harfbuzz_features = {
             "calt=on", -- Ligatures
             "dlig=on", -- Discretionary ligatures -<< <==> >>==
-            "VSAD=2",  -- () (  )
-            "VSAE=3",  -- {} {  }
-            "VSAI=2",  -- @
-            "VSAJ=3",  -- $ $SHELL
-            "VLAB=5",  -- !=
-            "VLAC=1",  -- == ===  (small gap between double equal-sign)
-            "VLAA=1",  -- <= >=
-            "VLAE=2",  -- ==> =>
-            "cv38=8",  -- m
-            "cv85=6",  -- 0 1234567890
-            "cv96=2",  -- .,:;?!
+            "VSAD=2", -- () (  )
+            "VSAE=3", -- {} {  }
+            "VSAI=2", -- @
+            "VSAJ=3", -- $ $SHELL
+            "VLAB=5", -- !=
+            "VLAC=1", -- == ===  (small gap between double equal-sign)
+            "VLAA=1", -- <= >=
+            "VLAE=2", -- ==> =>
+            "cv38=8", -- m
+            "cv85=6", -- 0 1234567890
+            "cv92=3", -- 7 1234567890
+            "cv96=2", -- .,:;?!
             "cv98=12", -- * ** ***
         },
     },
-    { family = "Symbols Nerd Font Mono", scale = 0.9,       weight = "Regular" },
-    { family = "Apple Color Emoji",      weight = "Regular" },
+    { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
+    { family = "Apple Color Emoji", weight = "Regular" },
 })
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
