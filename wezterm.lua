@@ -15,35 +15,19 @@ local function light_or_dark(appearance)
     end
 end
 
--- [[ Iosevka ]] --
--- https://github.com/be5invis/Iosevka/blob/main/doc/stylistic-sets.md
--- https://github.com/be5invis/Iosevka/blob/main/doc/character-variants.md
--- https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md
+-- [[ PragmataPro ]] --
+--  https://fsd.it/pragmatapro/Handbook.png
 config.font = wezterm.font_with_fallback({
     {
-        family = "Iosevka Custom",
-        weight = "Book",
-        stretch = "SemiExpanded",
+        family = "PragmataPro Liga",
+        weight = "Regular",
         harfbuzz_features = {
-            "calt=on", -- Ligatures
-            "dlig=on", -- Discretionary ligatures -<< <==> >>==
-            "VSAD=2", -- () (  )
-            "VSAE=3", -- {} {  }
-            "VSAI=2", -- @
-            "VSAJ=3", -- $ $SHELL
-            "VLAB=5", -- !=
-            "VLAC=1", -- == ===  (small gap between double equal-sign)
-            "VLAA=1", -- <= >=
-            "VLAE=2", -- ==> =>
-            "cv38=8", -- m
-            "cv85=6", -- 0 1234567890
-            "cv92=3", -- 7 1234567890
-            "cv96=2", -- .,:;?!
-            "cv98=12", -- * ** ***
+            "calt", -- Ligatures !=
+            "ss13", -- Better git tree lines
         },
     },
-    { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
-    { family = "Apple Color Emoji", weight = "Regular" },
+    { family = "Symbols Nerd Font", weight = "Regular" },
+    { family = "Noto Color Emoji", weight = "Regular" },
 })
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
@@ -51,7 +35,7 @@ config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
-config.font_size = 15
+config.font_size = 14
 config.bold_brightens_ansi_colors = true
 
 -- Cursor config
@@ -93,26 +77,37 @@ return config
 
 -- Below follow inactive font configurations
 
--- ###########################################################################
--- [[ Berkeley Mono ]] --
--- https://berkeleygraphics.com/typefaces/berkeley-mono/
+-- -- [[ Iosevka ]] --
+-- -- https://github.com/be5invis/Iosevka/blob/main/doc/stylistic-sets.md
+-- -- https://github.com/be5invis/Iosevka/blob/main/doc/character-variants.md
+-- -- https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md
 -- config.font = wezterm.font_with_fallback({
 --     {
---         family = "Berkeley Mono Variable",
---         weight = 400,
+--         family = "Iosevka Custom",
+--         weight = "Book",
+--         stretch = "SemiExpanded",
 --         harfbuzz_features = {
---             "calt=1", -- Ligatures --> -> != === |>
---             "ss01=0", -- Plain zero
---             "ss02=1", -- Dotted zero
---             "ss03=0", -- Slashed zero
---             "ss04=0", -- Striped zero
---             "ss05=1", -- Regular 7
---             "ss06=0", -- Fancy 7
+--             "calt=on", -- Ligatures
+--             "dlig=on", -- Discretionary ligatures -<< <==> >>==
+--             "VSAD=2", -- () (  )
+--             "VSAE=3", -- {} {  }
+--             "VSAI=2", -- @
+--             "VSAJ=3", -- $ $SHELL
+--             "VLAB=5", -- !=
+--             "VLAC=1", -- == ===  (small gap between double equal-sign)
+--             "VLAA=1", -- <= >=
+--             "VLAE=2", -- ==> =>
+--             "cv38=8", -- m
+--             "cv85=6", -- 0 1234567890
+--             "cv92=3", -- 7 1234567890
+--             "cv96=2", -- .,:;?!
+--             "cv98=12", -- * ** ***
 --         },
 --     },
---     { family = "Symbols Nerd Font Mono", weight = "Regular" },
---     { family = "Noto Color Emoji",       weight = "Regular" },
+--     { family = "Symbols Nerd Font Mono", scale = 0.9, weight = "Regular" },
+--     { family = "Apple Color Emoji", weight = "Regular" },
 -- })
+
 -- ###########################################################################
 -- [[ Berkeley Mono ]] --
 -- https://berkeleygraphics.com/typefaces/berkeley-mono/
@@ -276,17 +271,3 @@ return config
 --     { family = "Noto Color Emoji",       weight = "Regular" },
 -- })
 -- ###########################################################################
--- [[ PragmataPro ]] --
---  https://fsd.it/pragmatapro/Handbook.png
--- config.font = wezterm.font_with_fallback({
---     {
---         family = "PragmataPro Liga",
---         weight = 400, -- 450 is between Regular and Medium
---         harfbuzz_features = {
---             "calt",   -- Ligatures !=
---             "ss13",   -- Better git tree lines
---         },
---     },
---     { family = "Symbols Nerd Font", weight = "Regular" },
---     { family = "Noto Color Emoji",       weight = "Regular" },
--- })
