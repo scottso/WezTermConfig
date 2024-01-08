@@ -39,7 +39,7 @@ config.font_size = 14
 config.bold_brightens_ansi_colors = true
 
 -- Cursor config
-config.default_cursor_style = "SteadyBar"
+config.default_cursor_style = "SteadyBlock"
 config.force_reverse_video_cursor = false
 config.cursor_thickness = 3
 
