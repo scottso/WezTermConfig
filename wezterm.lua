@@ -44,8 +44,8 @@ config.force_reverse_video_cursor = false
 config.cursor_thickness = 3
 
 -- General configuration settings
-config.initial_rows = 30
-config.initial_cols = 100
+config.initial_rows = 45
+config.initial_cols = 110
 config.scrollback_lines = 4200
 config.adjust_window_size_when_changing_font_size = false
 config.hide_tab_bar_if_only_one_tab = true
