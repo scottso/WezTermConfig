@@ -4,19 +4,6 @@ local config = wezterm.config_builder()
 
 require("links").setup(config)
 
--- Function to set the color scheme based on the appearance (dark or light)
-local function light_or_dark(appearance)
-    if appearance:find("Dark") then
-        -- Dark theme
-        return "Catppuccin Macchiato"
-    else
-        -- Light theme
-        return "Catppuccin Latte"
-    end
-end
-
--- [[ PragmataPro ]] --
---  https://fsd.it/pragmatapro/Handbook.png
 config.font = wezterm.font_with_fallback({
     {
         family = "MonoLisa Uncursive",
@@ -31,16 +18,59 @@ config.font = wezterm.font_with_fallback({
             "zero",
         },
     },
-    { family = "Symbols Nerd Font", weight = "Regular" },
+    {
+        family = "Berkeley Mono Variable",
+        weight = "Regular",
+        harfbuzz_features = {
+            "calt",
+            "clig",
+            -- "ss01", -- normal zero
+            -- "ss02", -- dotted zero
+            "ss03", -- slashed zero
+            -- "ss04", -- broken slashed zero
+            -- "ss05", -- normal seven
+            -- "ss06", -- crossed sevens
+            -- "ss07",
+            "ss08",
+        },
+    },
+    {
+        family = "JetBrains Mono",
+        weight = "Regular",
+        -- https://github.com/JetBrains/JetBrainsMono/wiki/OpenType-features
+        harfbuzz_features = {
+            "calt",
+            "clig",
+            "liga",
+            "zero",
+            "ss20",
+            "cv02",
+            "cv03",
+            "cv04",
+            "cv05",
+            "cv06",
+            "cv07",
+            "cv11",
+            "cv14",
+            "cv15",
+            "cv16",
+            "cv17",
+        },
+    },
     { family = "Noto Color Emoji", weight = "Regular" },
+    { family = "Symbols Nerd Font", weight = "Regular" },
 })
 
+-- Function to set the color scheme based on the appearance (dark or light)
 local function scheme_for_appearance(appearance)
+    local light_font = "Papercolor Light (Gogh)"
+    local dark_font = "Papercolor Dark (Gogh)"
+
     if appearance:find("Dark") then
-        return "Catppuccin Mocha"
-    else
-        return "Catppuccin Latte"
+        return dark_font
     end
+
+    return light_font
 end
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
@@ -66,7 +96,8 @@ config.audible_bell = "Disabled"
 config.window_close_confirmation = "AlwaysPrompt"
 config.window_background_opacity = 1 -- Full opacity
 config.window_decorations = "TITLE|RESIZE"
-config.use_fancy_tab_bar = false
+config.use_fancy_tab_bar = true
+config.use_cap_height_to_scale_fallback_fonts = true
 -- config.term = "wezterm"
 config.underline_thickness = 1
 config.window_padding = { left = 5, right = 5, top = 5, bottom = 5 }
