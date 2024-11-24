@@ -2,6 +2,8 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+require("fullscreen")
+
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 tabline.setup()
 tabline.apply_to_config(config)
@@ -61,7 +63,7 @@ config.font = wezterm.font_with_fallback({
             "cv17",
         },
     },
-    { family = "Noto Color Emoji",  weight = "Regular" },
+    { family = "Noto Color Emoji", weight = "Regular" },
     { family = "Symbols Nerd Font", weight = "Regular" },
 })
 
