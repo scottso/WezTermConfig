@@ -7,5 +7,6 @@ wezterm.on("gui-startup", function(cmd)
 end)
 
 return {
-    native_macos_fullscreen_mode = true,
+    -- Uncomment this to use native macos_fullscreen_mode
+    -- native_macos_fullscreen_mode = true,
 }

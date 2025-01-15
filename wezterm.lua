@@ -69,19 +69,26 @@ config.font = wezterm.font_with_fallback({
 
 -- Function to set the color scheme based on the appearance (dark or light)
 local function scheme_for_appearance(appearance)
-    local light_font = "Papercolor Light (Gogh)"
-    local dark_font = "Papercolor Dark (Gogh)"
+    local light_scheme = "Papercolor Light (Gogh)"
+    local dark_scheme = "Papercolor Dark (Gogh)"
 
     if appearance:find("Dark") then
-        return dark_font
+        return dark_scheme
     end
 
-    return light_font
+    return light_scheme
+end
+
+local function get_appearance()
+    if wezterm.gui then
+        return wezterm.gui.get_appearance()
+    end
+
+    return "Dark"
 end
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
-config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
--- config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = scheme_for_appearance(get_appearance())
 
 config.font_size = 16
 config.bold_brightens_ansi_colors = true
