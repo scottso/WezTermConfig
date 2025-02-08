@@ -2,12 +2,11 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-require("fullscreen")
-
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 tabline.setup()
 tabline.apply_to_config(config)
 
+require("fullscreen")
 require("links").setup(config)
 
 config.font = wezterm.font_with_fallback({
@@ -116,6 +115,7 @@ config.underline_thickness = 1
 config.window_padding = { left = 5, right = 5, top = 5, bottom = 5 }
 config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = false
+config.native_macos_fullscreen_mode = true
 
 -- Moving tabs
 config.keys = {}
