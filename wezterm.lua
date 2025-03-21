@@ -6,7 +6,7 @@ local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabl
 tabline.setup()
 tabline.apply_to_config(config)
 
-require("fullscreen")
+require("startup")
 require("links").setup(config)
 
 config.font = wezterm.font_with_fallback({
